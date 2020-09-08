@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Maria Zakharenkova](https://up.htmlacademy.ru/htmlcss/29/user/1521379).
-* Наставник: `Неизвестно`.
+* Наставник: [Артем Михайлов](https://htmlacademy.ru/profile/id327277).
 
 ---
 
