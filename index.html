@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header>
-      <nav>
-        <a href="index.html">
+  <body class="page-body">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
           <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс">
         </a>
         <!-- Форма с полем поиска <a href="#">Поиск по сайту</a>-->
-        <a href="#">Войти</a>
+        <a class="login-link" href="#">Войти</a>
         <a href="#">Сравнить</a>
         <a href="#">Корзина</a>
-        <ul>
+        <ul class="site-navigation">
           <li>
             <a href="catalog.html">Каталог товаров</a>
-            <button type="button">+</button>
+            <span>+</span>
           </li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
@@ -25,31 +28,31 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <section>
+    <main class="container">
+      <section class="main-slider">
         <h1>Интернет-магазин «Девайс»</h1>
         <!-- Главный слайдер с товарами -->
-        <ul>
+        <ul class="slider-list">
           <!-- Первый слайд -->
-          <li>
-            <figure>
-              <a href="#">
+          <li class="slider-item">
+            <div>
+              <a class="slider-content" href="#">
                 <img src="img/placeholders/384x486.png" width="384" height="486" alt="Палка для селфи">
               </a>
-            </figure>
+            </div>
             <h2>Делай селфи, как Бен Стиллер!</h2>
             <p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-            <a href="#">Подробнее</a>
-            <ul>
-              <li>
+            <a class="button" href="#">Подробнее</a>
+            <ul class="slider-info">
+              <li class="slider-info-item">
                 <p>8,5 м</p>
                 <small>Длина палки</small>
               </li>
-              <li>
+              <li class="slider-info-item">
                 <p>5 кг</p>
                 <small>Вес палки</small>
               </li>
-              <li>
+              <li class="slider-info-item">
                 <p>Карбон</p>
                 <small>Материал</small>
               </li>
@@ -57,51 +60,71 @@
             <aside>01</aside>
           </li>
         </ul>
-        <aside>
-          <button type="button" disabled></button>
-          <button type="button"></button>
-          <button type="button"></button>
-        </aside>
+        <div class="slider-navigation">
+          <button class="button" type="button" disabled></button>
+          <button class="button" type="button"></button>
+          <button class="button" type="button"></button>
+        </div>
       </section>
-      <section>
+      <section class="catalog">
         <h1>Каталог</h1>
-        <nav>
-          <div>
-            <a href="#"><img src="img/placeholders/160.png" width="160" height="160" alt="Виртуальная реальность" /></a>
-            <a href="#">Виртуальная реальность</a>
-           </div>
-           <div>
-            <a href="#"><img src="img/placeholders/160.png" width="160" height="160" alt="Моноподы для селфи" /></a>
-            <a href="#">Моноподы для селфи</a>
-           </div>
-           <div>
-            <a href="#"><img src="img/placeholders/160.png" width="160" height="160" alt="Моноподы для селфи" /></a>
-            <a href="#">Моноподы для селфи</a>
-           </div>
-           <div>
-            <a href="#"><img src="img/placeholders/160.png" width="160" height="160" alt="Фитнес-браслеты" /></a>
-            <a href="#">Фитнес-браслеты</a>
-           </div>
-           <div>
-            <a href="#"><img src="img/placeholders/160.png" width="160" height="160" alt="Умные часы" /></a>
-            <a href="#">Умные часы</a>
-           </div>
-           <div>
-            <a href="#"><img src="img/placeholders/160.png" width="160" height="160" alt="Квадрокоптеры" /></a>
-            <a href="#">Квадрокоптеры</a>
-           </div>
-        </nav>
+          <ul class="catalog-list">
+            <li class="catalog-content">
+              <p>
+                <img src="img/placeholders/160.png" width="160" height="160" alt="Виртуальная реальность">
+              </p>
+              <h3 class="catalog-item">Виртуальная реальность</h3>
+            </li>
+          </ul>
+          <ul class="catalog-list">
+            <li class="catalog-content">
+              <p>
+                <img src="img/placeholders/160.png" width="160" height="160" alt="Моноподы для селфи">
+              </p>
+              <h3 class="catalog-item">Моноподы для селфи</h3>
+            </li>
+          </ul>
+          <ul class="catalog-list">
+            <li class="catalog-content">
+              <p>
+                <img src="img/placeholders/160.png" width="160" height="160" alt="Фитнес-браслеты">
+              </p>
+              <h3 class="catalog-item">Фитнес-браслеты</h3>
+            </li>
+          </ul>
+          <ul>
+            <li class="catalog-content">
+              <p>
+                <img src="img/placeholders/160.png" width="160" height="160" alt="Умные часы">
+              </p>
+              <h3 class="catalog-item">Умные часы</h3>
+            </li>
+          </ul>
+          <ul>
+            <li class="catalog-content">
+              <p>
+                <img src="img/placeholders/160.png" width="160" height="160" alt="Квадрокоптеры">
+              </p>
+              <h3 class="catalog-item">Квадрокоптеры</h3>
+            </li>
+          </ul>
       </section>
-      <section>
+      <section class="information">
         <h2>Информация</h2>
-        <ul>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Кредит</a></li>
-        </ul>
+        <label class="information-list">
+          <p class="information-item"><input name="delivery" type="radio" value="delivery" checked> Доставка</p>
+        </label>
+        <label>  
+          <p class="information-item"><input name="guarantee" type="radio" value="guarantee"> Гарантия</p>
+        </label>
+        <label>
+          <p class="information-item"><input name="credit" type="radio" value="credit"> Кредит</p>
+        </label>
+      </section>
+      <section> 
         <div>
           <!-- Табы -->
-          <div>
+          <div class="">
             <!-- Таб 1 -->
             <h2>Доставка</h2>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
@@ -117,50 +140,54 @@
             <h2>Кредит</h2>
             <p></p>
           </div>
-        </div>
+        </div> 
       </section>
-      <section>
+      <section class="partners">
           <h2>Наши партнеры</h2>
-          <div>
+          <ul class="partners-list">
             <!-- Ссылки на сайты пратнёров -->
-            <a href="#"><img src="img/placeholders/260x100.png" width="260" height="100" alt="dji"/></a>
-            <a href="#"><img src="img/placeholders/260x100.png" width="260" height="100" alt="SP Gadgets"/></a>
-            <a href="#"><img src="img/placeholders/260x100.png" width="260" height="100" alt="GoPro"/></a>
-            <a href="#"><img src="img/placeholders/260x100.png" width="260" height="100" alt="VIVE"/></a>
-          </div>
+            <li class="partners-content" href="#"><img src="img/placeholders/260x100.png" width="260" height="100" alt="dji"/></li>
+            <li class="partners-content" href="#"><img src="img/placeholders/260x100.png" width="260" height="100" alt="SP Gadgets"/></li>
+            <li class="partners-content" href="#"><img src="img/placeholders/260x100.png" width="260" height="100" alt="GoPro"/></li>
+            <li class="partners-content" href="#"><img src="img/placeholders/260x100.png" width="260" height="100" alt="VIVE"/></li>
+          </ul>
       </section>
 
-      <section>
-          <h2>О нас</h2>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика,<br/> который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки<br/> России! DEVICE работает со многими транспортными компаниями:</p>
-          <ul>
-            <li><b>Деловые линии</b></li>
-            <li><b>Автотрейдинг</b></li>
-            <li><b>ЖелДорЭкспедиция</b></li>
-          </ul>
-          <a href="#">Подробнее о нас</a>
+      <section> 
+        <h2>О компании</h2>
+        <section class="about">
+            <h2>О нас</h2>
+            <p>Огромный выбор гаджетов не оставит равнодушным гика,<br/> который есть в каждом из нас.</p>
+            <p>Мы можем доставить ваш товар в самые отдаленные точки<br/> России! DEVICE работает со многими транспортными компаниями:</p>
+            <ul class="about-list">
+              <li class="about-item"><b>Деловые линии</b></li>
+              <li class="about-item"><b>Автотрейдинг</b></li>
+              <li class="about-item"><b>ЖелДорЭкспедиция</b></li>
+            </ul>
+            <a class="button" href="#">Подробнее о нас</a>
+        </section>
+        <section class="contacts">
+            <h2>Контакты</h2>
+            <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br> проверить работоспособность покупки. Всякое бывает.</p>
+            <img src="img/placeholders/560x222.png" width="560" height="222" alt="Карта нашего офиса"/>
+            <a class="button" href="#">Напишите нам</a>
+        </section>
       </section>
-      <section>
-          <h2>Контакты</h2>
-          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br> проверить работоспособность покупки. Всякое бывает.</p>
-          <img src="img/placeholders/560x222.png" width="560" height="222" alt="Карта нашего офиса"/>
-          <a href="#">Напишите нам</a>
-      </section>
+
     </main>    
-    <footer>
-      <section>
+    <footer class="page-footer main-footer">
+      <section class="modal modal-login">
         <h2>Личный кабинет</h2>
-        <a href="index.html">
+        <a class="main-header-logo" href="#">
           <img src="img/logo-yellow.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс"/>
         </a>
-        <ul>
-          <li><a href="#">Войти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
-        </ul>
+        <nav>
+          <a href="#">Войти</a>
+          <a href="#">Сравнить</a>
+          <a href="#">Корзина</a>
+        </nav>
       </section>
-      <section>
+      <section class="footer-contacts">
         <h2>Контакты</h2>
         <p>г. Москва, ул. Строителей, 15</p>
         <ul>
@@ -168,14 +195,14 @@
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <p>Тел: <a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
+        <p>Тел: <a class="footer-phone" href="tel:+74954959595">+7 (495) 495-95-95</a></p>
       </section>
-      <section>
+      <section class="footer-social">
         <h2>Мы в соцсетях</h2>
         <ul>
-          <li><a href="#"><img src="img/placeholders/32.png" height="32" width="32" alt="Фейсбук"/>Фейсбук</a></li>
-          <li><a href="#"><img src="img/placeholders/32.png" height="32" width="32" alt="Инстаграм"/>Инстаграм</a></li>
-          <li><a href="#"><img src="img/placeholders/32.png" height="32" width="32" alt="Твиттер"/>Твиттер</a></li>
+          <li><a class="social-button" href="#"><img src="img/placeholders/32.png" height="32" width="32" alt="Фейсбук"/>Фейсбук</a></li>
+          <li><a class="social-button" href="#"><img src="img/placeholders/32.png" height="32" width="32" alt="Инстаграм"/>Инстаграм</a></li>
+          <li><a class="social-button" href="#"><img src="img/placeholders/32.png" height="32" width="32" alt="Твиттер"/>Твиттер</a></li>
         </ul>
         <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
       </section>

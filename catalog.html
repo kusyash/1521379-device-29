@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс - Каталог товаров</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header>
-      <nav>
-        <a href="index.html">
+  <body class="page-body">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
           <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс">
         </a>
         <!-- Форма с полем поиска <a href="#">Поиск по сайту</a>-->
         <a href="#">Валентин Петухов</a>
-        <a href="#">Выйти</a>
+        <a class="logout-link" href="#">Выйти</a>
         <a href="#">Сравнить</a>
         <a href="#">Корзина</a>
-        <ul>
+        <ul class="site-navigation">
           <li>
             <a href="catalog.html">Каталог товаров</a>
             <button type="button">+</button>
@@ -26,7 +28,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="container">
       
       <h1>Моноподы для селфи</h1>
       <ul>
@@ -83,6 +85,8 @@
             <a href="#">
               <img src="img/placeholders/360x380.png" width="360" height="380" alt="Профессиональная селфи-палка">
             </a>
+            <button type="button">В корзину</button>
+            <button type="button">Добавить к сравнению</button>
             <div>
               <h3>Профессиональная селфи-палка</h3>
               <p>1 500 ₽</p>
@@ -92,6 +96,8 @@
             <a href="#">
               <img src="img/placeholders/360x380.png" width="360" height="380" alt="Непотопляемая селфи-палка">
             </a>
+            <button type="button">В корзину</button>
+            <button type="button">Добавить к сравнению</button>
             <div>
               <h3>Непотопляемая селфи-палка</h3>
               <p>2 500 ₽</p>
@@ -102,6 +108,8 @@
               <img src="img/placeholders/360x380.png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
               <span>Новинка</span>
             </a> 
+            <button type="button">В корзину</button>
+            <button type="button">Добавить к сравнению</button>
             <div>
               <h3>Селфи-палка «Следуй за мной»</h3>
               <p>4 900 ₽</p>
@@ -138,12 +146,12 @@
         <a href="index.html">
           <img src="img/logo-yellow.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс"/>
         </a>
-        <ul>
-          <li><a href="#">Валентин Петухов</a></li>
-          <li><a href="#">Выйти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
-        </ul>
+        <nav>
+          <a href="#">Валентин Петухов</a>
+          <a href="#">Выйти</a>
+          <a href="#">Сравнить</a>
+          <a href="#">Корзина</a>
+        </nav>
       </section>
       <section>
         <h2>Контакты</h2>

@@ -1,0 +1,50 @@
+:root{
+    --base-black: #000;
+    --base-dark: #363636;
+    --base-grey: #464646;
+    --grey: #7e7e7e;
+    --light-grey: #e5e5e5;
+    --base-white: #ffffff;
+
+    --special-yellow-dark: #f0c52e;
+    --special-yellow-light:#f7e296;
+    --special-green: #91c92f;
+
+    --status: #f6dada;
+}
+
+body {
+    min-width: 1160px;
+    margin: 0;
+    padding: 0;
+    font-family: "Gilroy", , ;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 300;
+    color: var(--base-black);
+    text-transform: ;
+    background-color: var(--basic-white);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+@font-face{
+    /* gilroyextrabold 900  */
+}
+
+@font-face{
+    /* gilroylight 400  */
+}
+
+@font-face{
+    /* opensanslight 400  */
+}
+
+@font-face{
+    /* opensans 600  */
+}
+
+body {
+
+
+}
