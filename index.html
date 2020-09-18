@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -17,10 +16,18 @@
         <a class="login-link" href="#">Войти</a>
         <a href="#">Сравнить</a>
         <a href="#">Корзина</a>
-        <ul class="site-navigation">
+      </nav>
+      <nav class="site-navigation">
+        <ul>
           <li>
-            <a href="catalog.html">Каталог товаров</a>
-            <span>+</span>
+            <a href="catalog.html">Каталог товаров <span>+</span></a>
+            <ul>
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="#">Моноподы для селфи</a></li>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
           </li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
@@ -35,11 +42,9 @@
         <ul class="slider-list">
           <!-- Первый слайд -->
           <li class="slider-item">
-            <div>
-              <a class="slider-content" href="#">
-                <img src="img/placeholders/384x486.png" width="384" height="486" alt="Палка для селфи">
-              </a>
-            </div>
+            <a class="slider-item-link" href="#">
+              <img src="img/placeholders/384x486.png" width="384" height="486" alt="Палка для селфи">
+            </a>
             <h2>Делай селфи, как Бен Стиллер!</h2>
             <p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <a class="button" href="#">Подробнее</a>
@@ -68,88 +73,85 @@
       </section>
       <section class="catalog">
         <h1>Каталог</h1>
-          <ul class="catalog-list">
-            <li class="catalog-content">
-              <p>
+        <nav class="category-menu">
+          <ul class="category-list">
+            <li class="category-item">
+              <a class="category-link" href="#">
                 <img src="img/placeholders/160.png" width="160" height="160" alt="Виртуальная реальность">
-              </p>
-              <h3 class="catalog-item">Виртуальная реальность</h3>
+                <p class="category-name">Виртуальная реальность</p>
+              </a>
             </li>
-          </ul>
-          <ul class="catalog-list">
-            <li class="catalog-content">
-              <p>
+            <li class="category-item">
+              <a class="category-link" href="#">
                 <img src="img/placeholders/160.png" width="160" height="160" alt="Моноподы для селфи">
-              </p>
-              <h3 class="catalog-item">Моноподы для селфи</h3>
+                <p class="category-name">Моноподы для селфи</p>
+              </a> 
             </li>
-          </ul>
-          <ul class="catalog-list">
-            <li class="catalog-content">
-              <p>
+            <li class="category-item">
+              <a class="category-link" href="#">
                 <img src="img/placeholders/160.png" width="160" height="160" alt="Фитнес-браслеты">
-              </p>
-              <h3 class="catalog-item">Фитнес-браслеты</h3>
+                <p class="catalog-name">Фитнес-браслеты</p>
+              </a>
             </li>
-          </ul>
-          <ul>
-            <li class="catalog-content">
-              <p>
+            <li class="category-item">
+              <a class="category-link" href="#">
                 <img src="img/placeholders/160.png" width="160" height="160" alt="Умные часы">
-              </p>
-              <h3 class="catalog-item">Умные часы</h3>
+                <p class="catalog-name">Умные часы</p>
+              </a> 
             </li>
-          </ul>
-          <ul>
-            <li class="catalog-content">
-              <p>
+            <li class="category-item">
+              <a class="category-link" href="#">
                 <img src="img/placeholders/160.png" width="160" height="160" alt="Квадрокоптеры">
-              </p>
-              <h3 class="catalog-item">Квадрокоптеры</h3>
+                <p class="catalog-name">Квадрокоптеры</p>
+              </a>
             </li>
           </ul>
+        </nav>
       </section>
       <section class="information">
         <h2>Информация</h2>
-        <label class="information-list">
-          <p class="information-item"><input name="delivery" type="radio" value="delivery" checked> Доставка</p>
-        </label>
-        <label>  
-          <p class="information-item"><input name="guarantee" type="radio" value="guarantee"> Гарантия</p>
-        </label>
-        <label>
-          <p class="information-item"><input name="credit" type="radio" value="credit"> Кредит</p>
-        </label>
-      </section>
-      <section> 
-        <div>
+        <ul class="tabs-menu">
+          <li class="tabs-menu-item">
+            <input id="information-item-delivery" name="information-item" type="radio" value="delivery" checked />
+            <label class="button" for="information-item-delivery">Доставка</label>
+          </li>
+          <li class="tabs-menu-item">
+            <input id="information-item-guarantee" name="information-item" type="radio" value="guarantee" />
+            <label class="button" for="information-item-guarantee">Гарантия</label>
+          </li>
+          <li class="tabs-menu-item">
+            <input id="information-item-credit" name="information-item" type="radio" value="credit" />
+            <label class="button" for="information-item-credit">Кредит</label>
+          </li>
+        </ul>
+        <ul class="tabs">
           <!-- Табы -->
-          <div class="">
+          <li class="tabs-item">
             <!-- Таб 1 -->
             <h2>Доставка</h2>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            <img src="img/delivery.png" width="136" height="164" alt="Доставка"/>
-          </div>
-          <div>
+            <img class="tabs-item-icon" src="img/delivery.png" width="136" height="164" alt="Доставка"/>
+          </li>
+          <li class="tabs-item">
             <!-- Таб 2 -->
             <h2>Гарантия</h2>
-            <p></p>
-          </div>
-          <div>
+            <p>-</p>
+          </li>
+          <li class="tabs-item">
             <!-- Таб 3 -->
             <h2>Кредит</h2>
-            <p></p>
-          </div>
-        </div> 
+            <p>-</p>
+          </li>
+        </ul> 
       </section>
       <section class="partners">
           <h2>Наши партнеры</h2>
           <ul class="partners-list">
             <!-- Ссылки на сайты пратнёров -->
-            <li class="partners-content" href="#"><img src="img/placeholders/260x100.png" width="260" height="100" alt="dji"/></li>
-            <li class="partners-content" href="#"><img src="img/placeholders/260x100.png" width="260" height="100" alt="SP Gadgets"/></li>
-            <li class="partners-content" href="#"><img src="img/placeholders/260x100.png" width="260" height="100" alt="GoPro"/></li>
-            <li class="partners-content" href="#"><img src="img/placeholders/260x100.png" width="260" height="100" alt="VIVE"/></li>
+            <li class="partners-content"><img src="img/placeholders/260x100.png" width="260" height="100" alt="dji"/></li>
+            <li class="partners-content"><img src="img/placeholders/260x100.png" width="260" height="100" alt="SP Gadgets"/></li>
+            <li class="partners-content"><img src="img/placeholders/260x100.png" width="260" height="100" alt="GoPro"/></li>
+            <li class="partners-content"><img src="img/placeholders/260x100.png" width="260" height="100" alt="VIVE"/></li>
           </ul>
       </section>
 
@@ -204,7 +206,7 @@
           <li><a class="social-button" href="#"><img src="img/placeholders/32.png" height="32" width="32" alt="Инстаграм"/>Инстаграм</a></li>
           <li><a class="social-button" href="#"><img src="img/placeholders/32.png" height="32" width="32" alt="Твиттер"/>Твиттер</a></li>
         </ul>
-        <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
       </section>
     </footer>  
   </body>
