@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
+    
     <header class="main-header">
       <div class="container">
         <nav class="main-navigation">
@@ -53,9 +54,10 @@
         </nav>
       </div>
     </header>
-    <main class="container">
+
+    <main class="page-content">
       
-      <section class="section-slider main-slider">
+      <section class="section-slider main-slider container">
         <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
 
         <!-- Главный слайдер с товарами -->
@@ -96,7 +98,7 @@
         </div>
       </section>
 
-      <section class="section-categories">
+      <section class="section-categories container">
         <h1 class="visually-hidden">Каталог</h1>
 
         <nav class="categories-menu">
@@ -137,43 +139,46 @@
      
       <section class="information">
         <h2 class="visually-hidden">Информация</h2>
+        
+        <div class="container">
+          <ul class="tabs-menu">
+            <li class="tabs-menu-item">
+              <input id="information-item-delivery" name="information-item" type="radio" value="delivery" checked />
+              <label class="button" for="information-item-delivery">Доставка</label>
+            </li>
+            <li class="tabs-menu-item">
+              <input id="information-item-guarantee" name="information-item" type="radio" value="guarantee" />
+              <label class="button" for="information-item-guarantee">Гарантия</label>
+            </li>
+            <li class="tabs-menu-item">
+              <input id="information-item-credit" name="information-item" type="radio" value="credit" />
+              <label class="button" for="information-item-credit">Кредит</label>
+            </li>
+          </ul>
+          <ul class="tabs">
+            <!-- Табы -->
+            <li class="tabs-item">
+              <!-- Таб 1 -->
+              <h2>Доставка</h2>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              <img class="tabs-item-icon" src="img/delivery.png" width="136" height="164" alt="Доставка"/>
+            </li>
+            <li class="tabs-item">
+              <!-- Таб 2 -->
+              <h2>Гарантия</h2>
+              <p>-</p>
+            </li>
+            <li class="tabs-item">
+              <!-- Таб 3 -->
+              <h2>Кредит</h2>
+              <p>-</p>
+            </li>
+          </ul>
+        </div>
 
-        <ul class="tabs-menu">
-          <li class="tabs-menu-item">
-            <input id="information-item-delivery" name="information-item" type="radio" value="delivery" checked />
-            <label class="button" for="information-item-delivery">Доставка</label>
-          </li>
-          <li class="tabs-menu-item">
-            <input id="information-item-guarantee" name="information-item" type="radio" value="guarantee" />
-            <label class="button" for="information-item-guarantee">Гарантия</label>
-          </li>
-          <li class="tabs-menu-item">
-            <input id="information-item-credit" name="information-item" type="radio" value="credit" />
-            <label class="button" for="information-item-credit">Кредит</label>
-          </li>
-        </ul>
-        <ul class="tabs">
-          <!-- Табы -->
-          <li class="tabs-item">
-            <!-- Таб 1 -->
-            <h2>Доставка</h2>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            <img class="tabs-item-icon" src="img/delivery.png" width="136" height="164" alt="Доставка"/>
-          </li>
-          <li class="tabs-item">
-            <!-- Таб 2 -->
-            <h2>Гарантия</h2>
-            <p>-</p>
-          </li>
-          <li class="tabs-item">
-            <!-- Таб 3 -->
-            <h2>Кредит</h2>
-            <p>-</p>
-          </li>
-        </ul> 
       </section>
       
-      <section class="partners">
+      <section class="partners container">
           <h2 class="visually-hidden">Наши партнеры</h2>
           <ul class="partners-list">
             <!-- Ссылки на сайты пратнёров -->
@@ -192,7 +197,7 @@
           </ul>
       </section>
 
-      <section class="section-company">
+      <section class="section-company container">
         <h2 class="visually-hidden">О компании</h2>
 
         <section class="about-company">

@@ -1,16 +1,6 @@
 /* Шрифты */
-@font-face{
-    /* gilroyextrabold 900  */
-
-}
-
-@font-face{
-    /* gilroylight 300  */
-}
-
-
 /* https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap%22%20rel=%22stylesheet */
-@font-face{
+@font-face {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -19,7 +9,7 @@
     url('../fonts/opensans.woff') format('woff');
 }
 
-@font-face{
+@font-face {
     font-family: 'Open Sans Light';
     font-style: normal;
     font-weight: 300;
@@ -28,7 +18,7 @@
     url('../fonts/opensanslight.woff') format('woff');
 }
 
-@font-face{
+@font-face {
     font-family: 'Gilroy Extra Bold';
     font-style: normal;
     font-weight: 900;
@@ -37,7 +27,7 @@
     url('../fonts/gilroyextrabold.woff') format('woff');
 }
 
-@font-face{
+@font-face {
     font-family: 'Gilroy Light';
     font-style: normal;
     font-weight: 300;
@@ -47,7 +37,7 @@
 }
 
 /* Переменные */
-:root{
+:root {
     --basic-black: #000;
     --basic-extra-dark: #363636;
     --basic-dark: #464646;
@@ -67,17 +57,7 @@
     --font-family-special-light: "Gilroy Light", Arial, sans-serif;
 }
 
-
-
-a {
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
+/* Global */
 .page-body {
     min-width: 1160px;
     margin: 0;
@@ -85,18 +65,28 @@ img {
     font-family: var(--font-family-basic);
     font-size: 15px;
     line-height: 20px;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--basic-black);
     background-color: var(--basic-white);
 }
 
-.continer {
+.page a {
+    text-decoration: none;
+}
+
+.page img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* */
+.container {
     display: block;
     max-width: 1160px;
 }
 
 
-/* Button */
+/* Text */
 .button {
     font-family: var(--font-family-special-bold);
     text-align: center;
@@ -105,4 +95,46 @@ img {
     text-transform: uppercase;
     border: none;
 }
-  
+
+.label {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.link {
+    color: var(--basic-black);
+}
+.link:hover{
+    opacity: 0.6;
+}
+.link:focus,
+.link:active {
+    opacity: 0.3;
+}
+
+/* Header */
+.main-header {
+    padding-top: 40px;
+}
+
+.main-header .container {
+    background-color: var(--extra-yellow-light);
+}
+
+/* Content */
+.information {
+    position: relative;
+}
+.information::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background-color: var(--basic-grey);
+    width: 100%;
+    height: calc(100% - 115px);
+    margin-top: 115px;
+}
+.main-footer {
+    background-color: var(--basic-extra-dark);
+}
