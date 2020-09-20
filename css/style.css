@@ -3,7 +3,7 @@
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     src: local('Open Sans'), local('OpenSans'), 
     url('../fonts/opensans.woff2') format('woff2'),
     url('../fonts/opensans.woff') format('woff');
@@ -12,7 +12,7 @@
 @font-face {
     font-family: 'Open Sans Light';
     font-style: normal;
-    font-weight: 300;
+    font-weight: 200;
     src: local('Open Sans Light'), local('OpenSans-Light'), 
     url('../fonts/opensanslight.woff2') format('woff2'),
     url('../fonts/opensanslight.woff') format('woff');
@@ -21,7 +21,7 @@
 @font-face {
     font-family: 'Gilroy Extra Bold';
     font-style: normal;
-    font-weight: 900;
+    font-weight: 800;
     src: local('Gilroy Extra Bold'), local('Gilroy-Extra-Bold'), 
     url('../fonts/gilroyextrabold.woff2') format('woff2'),
     url('../fonts/gilroyextrabold.woff') format('woff');
@@ -30,7 +30,7 @@
 @font-face {
     font-family: 'Gilroy Light';
     font-style: normal;
-    font-weight: 300;
+    font-weight: 200;
     src: local('Gilroy Light'), local('Gilroy-Light'), 
     url('../fonts/gilroylight.woff2') format('woff2'),
     url('../fonts/gilroylight.woff') format('woff');
@@ -57,7 +57,16 @@
     --font-family-special-light: "Gilroy Light", Arial, sans-serif;
 }
 
-/* Global */
+.visually-hidden {
+    /* https://youtu.be/Ns0zijQJxH4?t=172 */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+
+/* Page */
 .page-body {
     min-width: 1160px;
     margin: 0;
@@ -65,7 +74,7 @@
     font-family: var(--font-family-basic);
     font-size: 15px;
     line-height: 20px;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--basic-black);
     background-color: var(--basic-white);
 }
@@ -79,7 +88,6 @@
     height: auto;
 }
 
-/* */
 .container {
     display: block;
     max-width: 1160px;
@@ -87,13 +95,48 @@
 
 
 /* Text */
-.button {
+.header-2 {
     font-family: var(--font-family-special-bold);
+    font-weight: 800;
+    font-size: 47px;
+    line-height: 58px;
+    color: var(--basic-black);
+    margin: 0;
+    padding: 15px 0;
+}
+
+.button {
+    position: relative;
+    font-family: var(--font-family-special-bold);
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: 0.2em;
     text-align: center;
+    padding: 9px 42px;
     color: var(--basic-black);
     vertical-align: middle;
     text-transform: uppercase;
     border: none;
+    background: none;
+}
+.button:focus,
+.button:hover {
+    outline: none;
+    background-color: var(--extra-yellow-dark);
+}
+.button:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+.button::after {
+    content: '';
+    background-color: var(--extra-yellow-dark);
+    height: 8px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: calc(50% - 4px);
 }
 
 .label {
@@ -104,7 +147,7 @@
 .link {
     color: var(--basic-black);
 }
-.link:hover{
+.link:hover {
     opacity: 0.6;
 }
 .link:focus,
