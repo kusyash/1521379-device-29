@@ -1,3 +1,52 @@
+/* Шрифты */
+@font-face{
+    /* gilroyextrabold 900  */
+
+}
+
+@font-face{
+    /* gilroylight 300  */
+}
+
+
+/* https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap%22%20rel=%22stylesheet */
+@font-face{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), 
+    url('../fonts/opensans.woff2') format('woff2'),
+    url('../fonts/opensans.woff') format('woff');
+}
+
+@font-face{
+    font-family: 'Open Sans Light';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), 
+    url('../fonts/opensanslight.woff2') format('woff2'),
+    url('../fonts/opensanslight.woff') format('woff');
+}
+
+@font-face{
+    font-family: 'Gilroy Extra Bold';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Gilroy Extra Bold'), local('Gilroy-Extra-Bold'), 
+    url('../fonts/gilroyextrabold.woff2') format('woff2'),
+    url('../fonts/gilroyextrabold.woff') format('woff');
+}
+
+@font-face{
+    font-family: 'Gilroy Light';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Gilroy Light'), local('Gilroy-Light'), 
+    url('../fonts/gilroylight.woff2') format('woff2'),
+    url('../fonts/gilroylight.woff') format('woff');
+}
+
+/* Переменные */
 :root{
     --basic-black: #000;
     --basic-extra-dark: #363636;
@@ -11,34 +60,49 @@
     --extra-green: #91c92f;
 
     --special-pink: #f6dada;
+
+    --font-family-basic: "Open Sans", Arial, sans-serif;
+    --font-family-basic-light: "Open Sans Light", Arial, sans-serif;
+    --font-family-special-bold: "Gilroy Extra Bold", Arial, sans-serif;
+    --font-family-special-light: "Gilroy Light", Arial, sans-serif;
 }
 
 
-@font-face{
-    /* gilroyextrabold 900  */
+
+a {
+    text-decoration: none;
 }
 
-@font-face{
-    /* gilroylight 400  */
+img {
+    max-width: 100%;
+    height: auto;
 }
-
-@font-face{
-    /* opensanslight 400  */
-}
-
-@font-face{
-    /* opensans 600  */
-}
-
 
 .page-body {
     min-width: 1160px;
     margin: 0;
     padding: 0;
-    /*font-family: "Gilroy",  ;*/
+    font-family: var(--font-family-basic);
     font-size: 15px;
     line-height: 20px;
     font-weight: 300;
     color: var(--basic-black);
     background-color: var(--basic-white);
 }
+
+.continer {
+    display: block;
+    max-width: 1160px;
+}
+
+
+/* Button */
+.button {
+    font-family: var(--font-family-special-bold);
+    text-align: center;
+    color: var(--basic-black);
+    vertical-align: middle;
+    text-transform: uppercase;
+    border: none;
+}
+  
