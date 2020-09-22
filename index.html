@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    
-    <header class="main-header">
-      <div class="container">
+    <header class="main-header-container">
+      <div>
         <nav class="main-navigation">
           <a class="main-header-logo">
             <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс">
           </a>
           <!-- Форма с полем поиска <a href="#">Поиск по сайту-->
-          <a class="link link-log-in" href="#">Войти</a>
-          <a class="link link-compare" href="#">Сравнить</a>
-          <a class="link link-cart" href="#">Корзина</a>
+          <div class="user-navigation">
+            <a class="link link-log-in" href="#">Войти</a>
+            <a class="link link-compare" href="#">Сравнить</a>
+            <a class="link link-cart" href="#">Корзина</a>
+          </div>
         </nav>
         <nav class="site-navigation">
           <ul class="site-navigation-list">
@@ -54,12 +55,9 @@
         </nav>
       </div>
     </header>
-
-    <main class="page-content">
-      
+    <main class="page-content" class="container">
       <section class="section-slider main-slider container">
         <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
-
         <!-- Главный слайдер с товарами -->
         <ul class="slider-list">
           <!-- Первый слайд -->
@@ -84,11 +82,11 @@
                 <small>Материал</small>
               </li>
             </ul>
-            <aside>01</aside>
+            <span>01</span>
           </li>
           <li class="slider-item">
             <!-- Второй слайд -->
-            <aside>02</aside>
+            <span>02</span>
           </li>
         </ul>
         <div class="slider-navigation">
@@ -97,10 +95,8 @@
           <button type="button"></button>
         </div>
       </section>
-
       <section class="section-categories container">
         <h1 class="visually-hidden">Каталог</h1>
-
         <nav class="categories-menu">
           <ul class="category-list">
             <li class="category-item">
@@ -135,11 +131,9 @@
             </li>
           </ul>
         </nav>
-      </section>
-     
+      </section>   
       <section class="information">
         <h2 class="visually-hidden">Информация</h2>
-        
         <div class="container">
           <ul class="tabs-menu">
             <li class="tabs-menu-item">
@@ -160,7 +154,7 @@
             <li class="tabs-item">
               <!-- Таб 1 -->
               <h2>Доставка</h2>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему<br/> подъезду совершенно бесплатно! Ведь мы неплохо<br/> заработаем, поднимая его на ваш этаж.</p>
               <img class="tabs-item-icon" src="img/delivery.png" width="136" height="164" alt="Доставка"/>
             </li>
             <li class="tabs-item">
@@ -175,9 +169,7 @@
             </li>
           </ul>
         </div>
-
-      </section>
-      
+      </section>    
       <section class="partners container">
           <h2 class="visually-hidden">Наши партнеры</h2>
           <ul class="partners-list">
@@ -196,11 +188,9 @@
             </li>
           </ul>
       </section>
-
       <section class="section-company container">
-        <h2 class="visually-hidden">О компании</h2>
-
-        <section class="about-company">
+        <h2>О компании</h2>
+        <div class="about-company">
             <h2>О нас</h2>
             <p>Огромный выбор гаджетов не оставит равнодушным гика,<br/> который есть в каждом из нас.</p>
             <p>Мы можем доставить ваш товар в самые отдаленные точки<br/> России! DEVICE работает со многими транспортными компаниями:</p>
@@ -210,23 +200,19 @@
               <li class="about-item"><b>ЖелДорЭкспедиция</b></li>
             </ul>
             <a class="button" href="#">Подробнее о нас</a>
-        </section>
-
-        <section class="company-contacts">
+        </div>
+        <div class="company-contacts">
             <h2>Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br> проверить работоспособность покупки. Всякое бывает.</p>
             <img src="img/placeholders/560x222.png" width="560" height="222" alt="Карта нашего офиса"/>
             <a class="button" href="#">Напишите нам</a>
-        </section>
-
+        </div>
       </section>
-
     </main>    
     <footer class="page-footer main-footer">
       <div class="container">
         <section class="footer-links">
           <h2 class="visually-hidden">Авторизация и покупки</h2>
-
           <a class="main-footer-logo" href="#">
             <img src="img/logo-yellow.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс"/>
           </a>
@@ -242,10 +228,8 @@
             </li>
           </ul>
         </section>
-
         <section class="footer-contacts">
           <h2 class="visually-hidden">Наши контакты и гарантии</h2>
-
           <p>г. Москва, ул. Строителей, 15</p>
           <ul class="footer-main-links">
             <li>
@@ -260,10 +244,8 @@
           </ul>
           <p>Тел: <a class="footer-phone" href="tel:+74954959595">+7 (495) 495-95-95</a></p>
         </section>
-
         <section class="footer-social-media">
           <h2 class="visually-hidden">Мы в соцсетях</h2>
-
           <ul class="footer-social-media-list">
             <li>
               <a class="link-social-media" href="#">

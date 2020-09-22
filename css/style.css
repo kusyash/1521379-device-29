@@ -156,11 +156,11 @@
 }
 
 /* Header */
-.main-header {
+.main-header-container{
     padding-top: 40px;
 }
 
-.main-header .container {
+.main-header-container {
     background-color: var(--extra-yellow-light);
 }
 
@@ -178,6 +178,7 @@
     height: calc(100% - 115px);
     margin-top: 115px;
 }
+
 .main-footer {
     background-color: var(--basic-extra-dark);
 }
