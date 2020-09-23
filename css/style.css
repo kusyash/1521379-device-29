@@ -156,11 +156,9 @@
 }
 
 /* Header */
-.main-header-container{
-    padding-top: 40px;
-}
-
-.main-header-container {
+.main-header.container {
+    margin-top: 40px;
+    position: relative;
     background-color: var(--extra-yellow-light);
 }
 
