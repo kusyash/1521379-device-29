@@ -39,10 +39,13 @@
 /* Переменные */
 :root {
     --basic-black: #000;
-    --basic-extra-dark: #363636;
+    --basic-dark-extra: #363636;
     --basic-dark: #464646;
-    --basic-light-dark: #7e7e7e;
+    --basic-dark-light: #7e7e7e;
+    --basic-grey-light: #eeeeee;
+    --basic-grey-lighter: #ebebeb;
     --basic-grey: #e5e5e5;
+    --basic-grey-dark: #dcdcdc;
     --basic-white: #ffffff;
 
     --extra-yellow-dark: #f0c52e;
@@ -81,6 +84,11 @@
 
 .page a {
     text-decoration: none;
+    color: inherit;
+}
+
+.page b {
+    font-weight: 800;
 }
 
 .page img {
@@ -93,20 +101,44 @@
     max-width: 1160px;
 }
 
-
 /* Text */
-.header-2 {
+.header-1,
+.header-2,
+.header-3 {
     font-family: var(--font-family-special-bold);
     font-weight: 800;
+    color: inherit; /*!!!!*/
+}
+
+.header-1 {
     font-size: 47px;
     line-height: 58px;
-    color: var(--basic-black);
-    margin: 0;
-    padding: 15px 0;
+}
+
+.header-2 {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.header-2:hover {
+    opacity: 0.6;
+}
+.header-2:active,
+.header-2:focus {
+    opacity: 0.3;
+}
+
+.header-3 {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .button {
     position: relative;
+    z-index: 1;
     font-family: var(--font-family-special-bold);
     font-size: 18px;
     font-weight: 800;
@@ -119,10 +151,14 @@
     text-transform: uppercase;
     border: none;
     background: none;
+    display: inline-block;
 }
-.button:focus,
-.button:hover {
+
+.button--active,
+.button:hover,
+.button:focus {
     outline: none;
+    cursor: pointer;
     background-color: var(--extra-yellow-dark);
 }
 .button:active {
@@ -138,6 +174,13 @@
     left: 0;
     top: calc(50% - 4px);
 }
+label.button input {
+    display: none;
+}
+.button--short {
+    padding-left: 24px;
+    padding-right: 24px;
+}
 
 .label {
     font-size: 14px;
@@ -145,10 +188,11 @@
 }
 
 .link {
-    color: var(--basic-black);
+    color: inherit;
 }
 .link:hover {
     opacity: 0.6;
+    cursor: pointer;
 }
 .link:focus,
 .link:active {
@@ -156,10 +200,18 @@
 }
 
 /* Header */
-.main-header.container {
+.main-header {
     margin-top: 40px;
     position: relative;
     background-color: var(--extra-yellow-light);
+}
+
+.user-navigation-list,
+.site-navigation-list,
+.site-navigation-sub-list {
+    list-style: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 /* Content */
@@ -177,6 +229,279 @@
     margin-top: 115px;
 }
 
+/* Главная страница */
+.slider-info {
+    list-style: none;
+}
+.slider-info-item {
+    font-family: var(--font-family-special-light);
+    letter-spacing: 0.1em;
+}
+.slider-info-item  p {
+    margin: 0;
+    font-size: 36px;
+    line-height: 42px;
+}
+.slider-info-item small {
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.category-item .category-icon {
+    background-color: var(--extra-yellow-light);
+}
+.category-item:hover .category-icon {
+    background-color: var(--extra-yellow-dark);
+}
+.category-item:active .category-icon,
+.category-item:focus .category-icon {
+    background-color: var(--extra-yellow-dark);
+}
+.category-item:active img,
+.category-item:focus img,
+.category-item:active .category-name,
+.category-item:focus .category-name {
+   opacity: 0.3;
+}
+.category-name {
+    font-family: var(--font-family-special-bold);
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.partner-item img {
+    filter: grayscale(100%);
+    opacity: 0.2;
+}
+.partner-item:hover img {
+    filter: none;
+    opacity: 1;
+}
+
+/* Табы */
+.tabs-menu {
+    list-style: none;
+    padding: 0;
+}
+.tabs-menu-item:hover {
+    cursor: pointer;
+}
+
+.tabs-menu-item--active,
+.tabs-menu-item:active {
+    background-color: var(--basic-black);
+}
+.tabs-menu-item--active .button,
+.tabs-menu-item:active .button {
+    color: var(--extra-yellow-light);
+    background-color: transparent;
+}
+.tabs-menu-item--active .button::after,
+.tabs-menu-item:active .button::after {
+    display: none;
+}
+
+
+/* Каталог */
+.breadcrumbs {
+    list-style: none;
+    padding: 0;
+}
+.breadcrumbs .label {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 0;
+    opacity: 0.3;
+}
+.breadcrumbs a.label:hover {
+    opacity: 0.6;
+}
+.breadcrumbs a.label:active,
+.breadcrumbs a.label:focus {
+    opacity: 1;
+}
+
+/* Фильтр */
+.filter-container{
+    background-color: var(--basic-grey);
+}
+.filter-header {
+    background-color: var(--basic-grey-dark);
+}
+
+
+
+/* Каталог товаров */
+.catalog-sorting input {
+    display: none;
+}
+.catalog-sorting label {
+    cursor: pointer;
+}
+.catalog-sorting-by input:not(:checked) + label {
+    opacity: 0.3;
+}
+.catalog-sorting-by input:not(:checked) + label:hover {
+    opacity: 0.6;
+}
+.catalog-sorting-by input:not(:checked) + label:active,
+.catalog-sorting-by input:not(:checked) + label:focus {
+    opacity: 1;
+}
+
+.catalog-sorting-as label{
+   font-size: 30px;
+}
+.catalog-sorting-as input:not(:checked) + label{
+    opacity: 0.2;
+}
+.catalog-sorting-as input:not(:checked) + label:hover{
+    opacity: 0.5;
+}
+.catalog-sorting-as input:not(:checked) + label:active,
+.catalog-sorting-as input:not(:checked) + label:focus {
+    opacity: 1;
+}
+
+.catalog-list{
+    list-style: none;
+    padding: 0;
+}
+.catalog-item-showcase {
+    background-color: var(--basic-grey-light);
+}
+.catalog-item-showcase a {
+    opacity: 0.5;
+}
+.catalog-item-showcase a:hover {
+    opacity: 1;
+}
+.catalog-item-showcase a:active,
+.catalog-item-showcase a:focus {
+    opacity: 0.2;
+}
+
+.catalog-item-name {
+    font-family: var(--font-family-special-bold);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+}
+.catalog-list a {
+    font-family: var(--font-family-basic);
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+}
+.catalog-item-price {
+    font-family: var(--font-family-special-light);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+}
+
+/* Страницы каталога */
+.catalog-pagination {
+    background-color: var(--basic-grey-light);
+}
+.catalog-pagination-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 70px;
+    display: flex;
+    justify-content: stretch;
+}
+
+.catalog-pagination-list li:first-child,
+.catalog-pagination-list li:last-child {
+    flex-grow: 1;
+}
+
+.catalog-pagination-list li:last-child {
+    text-align: right;
+}
+
+.catalog-pagination-link {
+    font-family: var(--font-family-special-bold);
+    color: inherit;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 15px;
+    margin: 0;
+    opacity: 0.3;
+    cursor: pointer;
+    height: 100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+}
+
+.catalog-pagination-link:hover {
+    opacity: 0.6;
+}
+
+.catalog-pagination-link:active,
+.catalog-pagination-link:focus {
+    opacity: 1;
+}
+
+.catalog-pagination-link.catalog-pagination-link--button {
+    padding-left: 30px;
+    padding-right: 30px;
+    opacity: 1;
+}
+
+.catalog-pagination-link.catalog-pagination-link--button:hover {
+    background-color: var(--basic-grey-dark);
+}
+.catalog-pagination-link.catalog-pagination-link--button:active span,
+.catalog-pagination-link.catalog-pagination-link--button:focus span {
+    opacity: 0.3;
+}
+
+.catalog-pagination-link.catalog-pagination-link--disable {
+    cursor: default;
+    opacity: 1;
+}
+.catalog-pagination-link.catalog-pagination-link--disable:hover,
+.catalog-pagination-link.catalog-pagination-link--disable:active,
+.catalog-pagination-link.catalog-pagination-link--disable:focus {
+    background-color: transparent;
+    opacity: 1;
+}
+.catalog-pagination-link.catalog-pagination-link--disable:active span,
+.catalog-pagination-link.catalog-pagination-link--disable:focus span {
+    opacity: 1;
+}
+
+/* Footer */
 .main-footer {
-    background-color: var(--basic-extra-dark);
+    background-color: var(--basic-dark-extra);
+    color: var(--basic-white)
+}
+
+.footer-main-links,
+.footer-personal-links,
+.footer-social-media-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social-media-list .link {
+    opacity: 0.6;
+}
+.footer-social-media-list .link:hover {
+    opacity: 1;
+}
+.footer-social-media-list .link:active,
+.footer-social-media-list .link:focus {
+    opacity: 0.3;
 }
