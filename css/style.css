@@ -114,6 +114,22 @@
     font-size: 47px;
     line-height: 58px;
 }
+.header-1.special {
+    letter-spacing: 0.2em;
+}
+
+.paragraph.special {
+    line-height: 28px;
+}
+.tabs-item p {
+    letter-spacing: 0.1em;
+}
+.header-3.about-list {
+    list-style: circle;
+    line-height: 28px;
+    text-transform: unset;
+    letter-spacing: unset;
+}
 
 .header-2 {
     font-size: 18px;
@@ -230,12 +246,14 @@ label.button input {
 }
 
 /* Главная страница */
-.slider-info {
+.slider-list {
     list-style: none;
+    padding: 0;
 }
 .slider-info-item {
     font-family: var(--font-family-special-light);
     letter-spacing: 0.1em;
+    list-style: none;
 }
 .slider-info-item  p {
     margin: 0;
@@ -263,13 +281,20 @@ label.button input {
 .category-item:focus .category-name {
    opacity: 0.3;
 }
+.category-list {
+    list-style: none;
+    padding: 0;
+}
 .category-name {
     font-family: var(--font-family-special-bold);
-    letter-spacing: 1px;
+    letter-spacing: 0.05em;
     font-size: 18px;
     line-height: 22px;
 }
-
+.partners-list{
+    list-style: none;
+    padding: 0;
+}
 .partner-item img {
     filter: grayscale(100%);
     opacity: 0.2;
@@ -280,7 +305,7 @@ label.button input {
 }
 
 /* Табы */
-.tabs-menu {
+.tabs-menu{
     list-style: none;
     padding: 0;
 }
@@ -302,6 +327,10 @@ label.button input {
     display: none;
 }
 
+.tabs {
+    list-style: none;
+    padding: 0;
+}
 
 /* Каталог */
 .breadcrumbs {
