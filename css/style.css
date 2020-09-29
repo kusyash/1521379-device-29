@@ -107,30 +107,22 @@
 .header-3 {
     font-family: var(--font-family-special-bold);
     font-weight: 800;
-    color: inherit; /*!!!!*/
+    color: inherit;
 }
-
 .header-1 {
     font-size: 47px;
     line-height: 58px;
 }
-.header-1.special {
+.header-1--special {
     letter-spacing: 0.2em;
 }
 
-.paragraph.special {
-    line-height: 28px;
-}
-.tabs-item p {
-    letter-spacing: 0.1em;
-}
 .header-3.about-list {
     list-style: circle;
     line-height: 28px;
     text-transform: unset;
     letter-spacing: unset;
 }
-
 .header-2 {
     font-size: 18px;
     line-height: 22px;
@@ -215,6 +207,10 @@ label.button input {
     opacity: 0.3;
 }
 
+.paragraph--special {
+    line-height: 28px;
+}
+
 /* Header */
 .main-header {
     margin-top: 40px;
@@ -250,10 +246,12 @@ label.button input {
     list-style: none;
     padding: 0;
 }
+.slider-info {
+    list-style: none;
+}
 .slider-info-item {
     font-family: var(--font-family-special-light);
     letter-spacing: 0.1em;
-    list-style: none;
 }
 .slider-info-item  p {
     margin: 0;
@@ -312,7 +310,6 @@ label.button input {
 .tabs-menu-item:hover {
     cursor: pointer;
 }
-
 .tabs-menu-item--active,
 .tabs-menu-item:active {
     background-color: var(--basic-black);
@@ -330,6 +327,9 @@ label.button input {
 .tabs {
     list-style: none;
     padding: 0;
+}
+.tabs-item p {
+    letter-spacing: 0.1em;
 }
 
 /* Каталог */
