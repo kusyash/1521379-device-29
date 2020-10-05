@@ -12,7 +12,9 @@
         <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс">
       </a>
       <nav class="main-navigation">
-        <!-- Форма с полем поиска <a href="#">Поиск по сайту-->
+        <div>
+          <!-- Форма с полем поиска <a href="#">Поиск по сайту-->
+        </div>
         <ul class="user-navigation-list">
           <li><a class="link link-log-in" href="#">Войти</a></li>
           <li><a class="link link-compare" href="#">Сравнить</a></li>
@@ -20,6 +22,31 @@
         </ul>
       </nav>
       <nav class="site-navigation">
+        <ul class="site-navigation-list">
+          <li>
+            <a href="catalog.html">
+              <span class="header-2">Каталог товаров</span>
+              <img  width="22" height="22" src="img/icon_plus.svg" alt="Меню">
+            </a>
+            <ul class="site-navigation-sub-list">
+              <li>
+                <a class="link-inner" href="#">Виртуальная реальность</a>
+              </li>
+              <li>
+                <a class="link-inner" href="#">Моноподы для селфи</a>
+              </li>
+              <li>
+                <a class="link-inner" href="#">Фитнес-браслеты</a>
+              </li>
+              <li>
+                <a class="link-inner" href="#">Умные часы</a>
+              </li>
+              <li>
+                <a class="link-inner" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
         <ul class="site-navigation-list">
           <li>
             <a href="catalog.html">
@@ -63,9 +90,12 @@
         <ul class="slider-list">
           <!-- Первый слайд -->
           <li class="slider-item">
+            <div class="product-image">
             <a class="slider-item-link" href="#">
               <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">
             </a>
+            </div>
+            <div class="product-description">
             <h2 class="header-1 header-1--slider">Делай селфи,<br/> как Бен Стиллер!</h2>
             <p class="paragraph">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <a class="button button--big" href="#">Подробнее</a>
@@ -83,6 +113,7 @@
                 <small>Материал</small>
               </li>
             </ul>
+            </div>
             <span>01</span>
           </li>
           <li class="slider-item">
@@ -139,48 +170,50 @@
           </ul>
         </nav>
       </section>   
-      <section class="main-information">
-        <h2 class="visually-hidden">Информация</h2>
-        <div class="container">
-          <ul class="tabs-menu">
-            <li class="tabs-menu-item tabs-menu-item--active">
-              <label class="button button--short">
-                <input name="main-information-item" type="radio" value="delivery" checked />
-                Доставка
-              </label>
-            </li>
-            <li class="tabs-menu-item">
-              <label class="button button--short">
-                <input name="main-information-item" type="radio" value="guarantee" />
-                Гарантия
-              </label>
-            </li>
-            <li class="tabs-menu-item">
-              <label class="button button--short">
-                <input name="main-information-item" type="radio" value="credit" />
-                Кредит
-              </label>
-            </li>
-          </ul>
-          <ul class="tabs">
-            <!-- Табы -->
-            <li class="tabs-item">
-              <!-- Таб 1 -->
-              <h2 class="header-1 header-1--special">Доставка</h2>
-              <p class="paragraph paragraph--special">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-              <img class="tabs-item-icon" src="img/delivery.svg" width="136" height="164" alt="Доставка"/>
-            </li>
-            <li class="tabs-item">
-              <!-- Таб 2 -->
-              <h2 class="header-1 header-1--special">Гарантия</h2>
-              <p class="paragraph paragraph--special">-</p>
-            </li>
-            <li class="tabs-item">
-              <!-- Таб 3 -->
-              <h2 class="header-1 header-1--special">Кредит</h2>
-              <p class="paragraph paragraph--special">-</p>
-            </li>
-          </ul>
+      <section class="main-information container">
+        <div class="main-information-tabs">
+          <div class="main-information-toggle">
+            <h2 class="visually-hidden">Информация</h2>
+            <ul class="tabs-menu">
+              <li class="tabs-menu-item tabs-menu-item--active">
+                <label class="button button--short">
+                  <input name="main-information-item" type="radio" value="delivery" checked />
+                  Доставка
+                </label>
+              </li>
+              <li class="tabs-menu-item">
+                <label class="button button--short">
+                  <input name="main-information-item" type="radio" value="guarantee" />
+                  Гарантия
+                </label>
+              </li>
+              <li class="tabs-menu-item">
+                <label class="button button--short">
+                  <input name="main-information-item" type="radio" value="credit" />
+                  Кредит
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="main-information-info">
+            <ul class="tabs">
+              <!-- Табы -->
+              <li class="tabs-item tabs-item--active">
+                <!-- Таб 1 -->
+                <h2 class="header-1 header-1--special">Доставка</h2>
+                <p class="paragraph paragraph--special">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                <img class="tabs-item-icon" src="img/delivery.svg" width="136" height="164" alt="Доставка"/>
+              </li>
+              <li class="tabs-item">
+                <h2 class="header-1 header-1--special">Гарантия</h2>
+                <p class="paragraph paragraph--special">-</p>
+              </li>
+              <li class="tabs-item">
+                <h2 class="header-1 header-1--special">Кредит</h2>
+                <p class="paragraph paragraph--special">-</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>    
       <section class="partners container">
@@ -254,10 +287,13 @@
               <a class="header-2" href="#">Контакты</a>
             </li>
           </ul>
-          <p class="paragraph">Тел: <a class="footer-phone" href="tel:+74954959595">+7 (495) 495-95-95</a></p>
+          <p class="paragraph">
+            Тел: <a class="footer-phone" href="tel:+74954959595">+7 (495) 495-95-95</a>
+          </p>
         </section>
         <section class="footer-social-media">
           <h2 class="visually-hidden">Мы в соцсетях</h2>
+          <div>&nbsp;</div>
           <ul class="footer-social-media-list">
             <li>
               <a class="link link-social-media" href="#">
@@ -275,8 +311,8 @@
               </a>
             </li>
           </ul>
+          <a class="link footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
         </section>
-        <a class="link footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
       </div>
     </footer>  
   </body>

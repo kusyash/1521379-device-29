@@ -70,7 +70,16 @@
 }
 
 /* Page */
+.page {
+    height: 100%;
+}
+
 .page-body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+    min-height: 100%;
     min-width: 1160px;
     margin: 0;
     padding: 0;
@@ -99,6 +108,8 @@
 .container {
     display: block;
     max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 /* Text */
@@ -213,9 +224,26 @@ label.button input {
 
 /* Header */
 .main-header {
+    width: 100%;
     margin-top: 40px;
+    padding: 0 60px;
+    box-sizing: border-box;
     position: relative;
     background-color: var(--extra-yellow-light);
+}
+.main-header-logo {
+    display: inline-block;
+    margin-top: -18px;
+}
+.main-navigation {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    margin: 0 auto;
+}
+.site-navigation {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    margin: 0 auto;
 }
 
 .user-navigation-list,
@@ -224,6 +252,7 @@ label.button input {
     list-style: none;
     cursor: pointer;
     padding: 0;
+    margin: 0;
 }
 
 /* Content */
@@ -242,16 +271,21 @@ label.button input {
 }
 
 /* Главная страница */
-.slider-list {
-    list-style: none;
-    padding: 0;
+.slider-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .slider-info {
-    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 68px 0;
+    margin: 0 auto;
 }
+
 .slider-info-item {
     font-family: var(--font-family-special-light);
     letter-spacing: 0.1em;
+    list-style: none;
 }
 .slider-info-item  p {
     margin: 0;
@@ -262,10 +296,26 @@ label.button input {
     font-size: 13px;
     line-height: 15px;
 }
-
-.category-item .category-icon {
+.category-list {
+    display: grid;
+    width: 1160px;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 40px;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+.category-item .category-icon  {
+    display: grid;
+    width: 160px;
+    height: 160px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
     background-color: var(--extra-yellow-light);
 }
+
 .category-item:hover .category-icon {
     background-color: var(--extra-yellow-dark);
 }
@@ -279,10 +329,6 @@ label.button input {
 .category-item:focus .category-name {
    opacity: 0.3;
 }
-.category-list {
-    list-style: none;
-    padding: 0;
-}
 .category-name {
     font-family: var(--font-family-special-bold);
     letter-spacing: 0.05em;
@@ -290,6 +336,8 @@ label.button input {
     line-height: 22px;
 }
 .partners-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     list-style: none;
     padding: 0;
 }
@@ -302,7 +350,21 @@ label.button input {
     opacity: 1;
 }
 
+.section-company  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 /* Табы */
+.main-information {
+    background-color: var(--basic-grey);
+}
+.main-information-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 116px;
+    align-items: baseline;
+}
 .tabs-menu{
     list-style: none;
     padding: 0;
@@ -325,17 +387,31 @@ label.button input {
 }
 
 .tabs {
-    list-style: none;
+    display: grid;
+    grid-template-columns: 460px 1fr;
+    align-content: start;
     padding: 0;
+    margin: 0;
+    list-style: none;
 }
 .tabs-item p {
     letter-spacing: 0.1em;
 }
+.tabs-item:nth-child(n+2) {
+    display:none
+}
 
 /* Каталог */
+.page-content .breadcrumbs {
+    grid-column: 1 / -1;
+    margin-bottom: 40px;
+    outline-offset: -5px;
+  }
+  
 .breadcrumbs {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 .breadcrumbs .label {
     font-size: 14px;
@@ -392,11 +468,6 @@ label.button input {
 .catalog-sorting-as input:not(:checked) + label:focus {
     opacity: 1;
 }
-
-.catalog-list{
-    list-style: none;
-    padding: 0;
-}
 .catalog-item-showcase {
     background-color: var(--basic-grey-light);
 }
@@ -410,13 +481,24 @@ label.button input {
 .catalog-item-showcase a:focus {
     opacity: 0.2;
 }
-
+.catalog-add-to-ref {
+    display: grid;
+    grid-template-columns: max-content;
+}
 .catalog-item-name {
     font-family: var(--font-family-special-bold);
     font-weight: 800;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.05em;
+}
+.catalog-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    justify-items: center;
+    padding: 0;
+    list-style: none;
 }
 .catalog-list a {
     font-family: var(--font-family-basic);
@@ -514,16 +596,75 @@ label.button input {
 /* Footer */
 .main-footer {
     background-color: var(--basic-dark-extra);
-    color: var(--basic-white)
-}
+    color: var(--basic-white);
+    margin-top: 86px;
+    padding: 65px 0 60px;
 
+}
+.main-footer .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content max-content max-content;
+    row-gap: 40px;
+  }  
+
+.footer-links,
 .footer-main-links,
 .footer-personal-links,
 .footer-social-media-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
+.footer-links {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.footer-personal-links {
+    display: grid;
+    justify-self: right;
+    grid-auto-flow: column;
+    column-gap: 30px;
+}
+
+.footer-contacts {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    align-items: center;
+}
+.footer-contacts .paragraph {
+    margin: 0;
+}
+.footer-contacts .paragraph:last-child {
+    text-align: right;
+}
+
+.footer-main-links {
+    display: grid;
+    justify-self: center;
+    grid-auto-flow: column;
+    column-gap: 36px;
+}
+
+.footer-social-media {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    padding-top: 26px;
+}
+.footer-social-media .footer-copyright {
+    text-align: right;
+}
+.footer-social-media-list {
+    display: grid;
+    justify-self: center;
+    grid-auto-flow: column;
+    column-gap: 20px;
+}
 .footer-social-media-list .link {
     opacity: 0.6;
 }
