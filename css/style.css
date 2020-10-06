@@ -298,13 +298,17 @@ label.button input {
 }
 .category-list {
     display: grid;
-    width: 1160px;
-    grid-template-columns: repeat(6, 1fr);
+    grid-auto-flow: column;
+    justify-items: center;
     column-gap: 40px;
     margin: 0;
     list-style: none;
     padding: 0;
 }
+.category-item {
+    max-width: 160px;
+}
+
 .category-item .category-icon  {
     display: grid;
     width: 160px;
@@ -356,14 +360,41 @@ label.button input {
 }
 
 /* Табы */
+.section-slider {
+    position: relative;
+}
+.section-slider-decoration {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
 .main-information {
+    position: relative;
+    z-index: 1;
+}
+.main-information:before {
+    content: '';
     background-color: var(--basic-grey);
+    width: 100%;
+    height: calc(100% - 68px);
+    position: absolute;
+    z-index: -1;
+    top: 68px;
+    left: 0;
 }
 .main-information-tabs {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 284px 1fr;
     grid-column-gap: 116px;
-    align-items: baseline;
+    align-items: stretch;
+}
+.main-information-toggle {
+    display: grid;
+    width: 100%;
+    height: calc(100% - 33px);
+    top: 33px;
+    left: 0;
+    position: relative;
 }
 .tabs-menu{
     list-style: none;
