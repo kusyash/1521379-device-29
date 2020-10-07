@@ -345,7 +345,7 @@ label.button input {
     grid-auto-flow: column;
     justify-items: center;
     list-style: none;
-    padding: 0;
+    padding: 90px 0;
     margin: 0;
 }
 .partner-item img {
@@ -371,6 +371,11 @@ label.button input {
     right: 0;
     bottom: 0;
 }
+.section-slider-pagination {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
 .main-information {
     position: relative;
     z-index: 1;
@@ -390,14 +395,12 @@ label.button input {
     grid-template-columns: 284px 1fr;
     grid-column-gap: 116px;
     align-items: stretch;
+    padding-bottom: 135px;
 }
 .main-information-toggle {
     display: grid;
-    width: 100%;
-    height: calc(100% - 33px);
-    top: 33px;
-    left: 0;
-    position: relative;
+    grid-auto-flow: row;
+    padding-top: 30px;
 }
 .tabs-menu{
     list-style: none;
