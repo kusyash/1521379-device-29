@@ -8,101 +8,136 @@
   </head>
   <body class="page-body">
     <header class="main-header">
-      <section class="main-header-section container">
-        <div class="main-header container">
-          <a class="link main-header-logo" href="index.html">
-            <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс">
-          </a>
-          <nav class="main-navigation">
-            <div>
-              <!-- Форма с полем поиска <a href="#">Поиск по сайту-->
-            </div>
-            <ul class="user-navigation-list">
-              <li><a class="link link-log-in" href="#">Войти</a></li>
-              <li><a class="link link-compare" href="#">Сравнить</a></li>
-              <li><a class="link link-cart" href="#">Корзина</a></li>
-            </ul>
-          </nav>
-          <nav class="site-navigation">
-            <ul class="site-navigation-list">
-              <li>
-                <a href="catalog.html">
-                  <span class="header-2">Каталог товаров</span>
-                  <img  width="22" height="22" src="img/icon_plus.svg" alt="Меню">
-                </a>
-                <ul class="site-navigation-sub-list">
-                  <li>
-                    <a class="link-inner" href="#">Виртуальная реальность</a>
-                  </li>
-                  <li>
-                    <a class="link-inner" href="#">Моноподы для селфи</a>
-                  </li>
-                  <li>
-                    <a class="link-inner" href="#">Экшн-камеры</a>
-                  </li>
-                  <li>
-                    <a class="link-inner" href="#">Фитнес-браслеты</a>
-                  </li>
-                  <li>
-                    <a class="link-inner" href="#">Умные часы</a>
-                  </li>
-                  <li>
-                    <a class="link-inner" href="#">Квадрокоптер</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a class="header-2" href="#">Доставка</a>
-              </li>
-              <li>
-                <a class="header-2" href="#">Гарантия</a>
-              </li>
-              <li>
-                <a class="header-2" href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </section>
+      <div class="container-inner">
+        <a class="main-header-logo link" href="index.html">
+          <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс">
+        </a>
+        <nav class="main-navigation">
+          <div>Поиск по сайту</div>
+          <ul class="user-navigation-list">
+            <li><a class="link link-user" href="#">Войти</a></li>
+            <li><a class="link link-compare" href="#">Сравнить</a></li>
+            <li><a class="link link-cart" href="#">Корзина</a></li>
+          </ul>
+        </nav>
+        <nav class="site-navigation">
+          <ul class="site-navigation-list">
+            <li>
+              <a href="catalog.html">
+                <span class="header-2">Каталог товаров</span>
+                <img  width="22" height="22" src="img/icon_plus.svg" alt="Меню">
+              </a>
+              <ul class="site-navigation-sub-list">
+                <li>
+                  <a class="link-inner" href="#">Виртуальная реальность</a>
+                </li>
+                <li>
+                  <a class="link-inner" href="#">Моноподы для селфи</a>
+                </li>
+                <li>
+                  <a class="link-inner" href="#">Экшн-камеры</a>
+                </li>
+                <li>
+                  <a class="link-inner" href="#">Фитнес-браслеты</a>
+                </li>
+                <li>
+                  <a class="link-inner" href="#">Умные часы</a>
+                </li>
+                <li>
+                  <a class="link-inner" href="#">Квадрокоптер</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="header-2" href="#">Доставка</a>
+            </li>
+            <li>
+              <a class="header-2" href="#">Гарантия</a>
+            </li>
+            <li>
+              <a class="header-2" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="page-content">
-      <section class="section-slider main-slider container">
+      <section class="main-slider container">
         <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
         <!-- Главный слайдер с товарами -->
-        <ul class="slider-list">
+        <ol class="slider-list">
           <!-- Первый слайд -->
-          <li class="slider-item">
+          <li class="slider-item" data-order="01">
             <div class="slider-image">
             <a class="slider-item-link" href="#">
               <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">
             </a>
             </div>
             <div class="slider-description">
-            <h2 class="header-1 header-1--slider">Делай селфи,<br/> как Бен Стиллер!</h2>
-            <p class="paragraph">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              <h2 class="header-1 header-1--slider">Делай селфи,<br/> как Бен Стиллер!</h2>
+              <p class="paragraph">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              <a class="button button--big" href="#">Подробнее</a>
+              <ul class="slider-info">
+                <li class="slider-info-item">
+                  <p class="paragraph">8,5 м</p>
+                  <small>Длина палки</small>
+                </li>
+                <li class="slider-info-item">
+                  <p class="paragraph">5 кг</p>
+                  <small>Вес палки</small>
+                </li>
+                <li class="slider-info-item">
+                  <p class="paragraph">Карбон</p>
+                  <small>Материал</small>
+                </li>
+              </ul>
+            </div>
+          </li>
+            <!-- Второй слайд -->
+          <li class="slider-item">
+            <div class="slider-image">
+            <a class="slider-item-link" href="#">
+              <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
+            </a>
+            </div>
+            <div class="slider-description">
+            <h2 class="header-1 header-1--slider">Худеем<br/> правильно!</h2>
+            <p class="paragraph">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>не пропускать занятия и соблюдать диету.</p>
             <a class="button button--big" href="#">Подробнее</a>
             <ul class="slider-info">
               <li class="slider-info-item">
-                <p class="paragraph">8,5 м</p>
-                <small>Длина палки</small>
-              </li>
-              <li class="slider-info-item">
-                <p class="paragraph">5 кг</p>
-                <small>Вес палки</small>
-              </li>
-              <li class="slider-info-item">
-                <p class="paragraph">Карбон</p>
-                <small>Материал</small>
+                <p class="paragraph">48 ч</p>
+                <small>Без подзарядки</small>
               </li>
             </ul>
             </div>
-            <span class="section-slider-decoration">01</span>
-          </li>
-          <li class="slider-item">
-            <!-- Второй слайд -->
             <span class="section-slider-decoration">02</span>
           </li>
-        </ul>
+          <!-- Третий слайд -->
+          <li class="slider-item">
+            <div class="slider-image">
+            <a class="slider-item-link" href="#">
+              <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+            </a>
+            </div>
+            <div class="slider-description">
+            <h2 class="header-1 header-1--slider">Порхает как бабочка,<br/>жалит как пчела!</h2>
+            <p class="paragraph">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>мощным лазером, замаскированным под стандартную камеру.</p>
+            <a class="button button--big" href="#">Подробнее</a>
+            <ul class="slider-info">
+              <li class="slider-info-item">
+                <p class="paragraph">800 м</p>
+                <small>Дальность полета</small>
+              </li>
+              <li class="slider-info-item">
+                <p class="paragraph">50 м</p>
+                <small>Радиус поражения</small>
+              </li>
+            </ul>
+            </div>
+            <span class="section-slider-decoration">03</span>
+          </li>
+        </ol>
         <div class="slider-navigation section-slider-pagination">
           <button type="button" disabled></button>
           <button type="button"></button>
@@ -243,7 +278,7 @@
           </a>
           <ul class="footer-personal-links">
             <li>
-              <a class="link link-log-in" href="#">Войти</a>
+              <a class="link link-user" href="#">Войти</a>
             </li>
             <li>
               <a class="link link-compare" href="#">Сравнить</a>
