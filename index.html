@@ -13,7 +13,10 @@
           <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс">
         </a>
         <nav class="main-navigation">
-          <div>Поиск по сайту</div>
+          <div class="site-search">
+            <input class="search-field" placeholder="Поиск по сайту">
+            <button class="from-button" type="submit">Найти</button>
+          </div>
           <ul class="user-navigation-list">
             <li><a class="link link-user" href="#">Войти</a></li>
             <li><a class="link link-compare" href="#">Сравнить</a></li>
@@ -45,7 +48,6 @@
               </ul>
               <a class="site-navigation-list-link" href="catalog.html">
                 <span class="header-2">Каталог товаров</span>
-                <img  width="22" height="22" src="img/icon_plus.svg" alt="Меню">
               </a>
             </li>
             <li>
@@ -62,12 +64,12 @@
       </div>
     </header>
     <main class="page-content">
-      <section class="main-slider container">
+      <section class="main-slider container alt-text-content">
         <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
         <!-- Главный слайдер с товарами -->
         <ol class="slider-list">
           <!-- Первый слайд -->
-          <li class="slider-item">
+          <li class="slider-item slide-current">
             <div class="slider-image">
             <a class="slider-item-link" href="#">
               <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">
@@ -139,9 +141,9 @@
           </li>
         </ol>
         <div class="slider-navigation section-slider-pagination">
-          <button type="button" disabled></button>
-          <button type="button"></button>
-          <button type="button"></button>
+          <button class="current" type="button" aria-label="Первый слайд"></button>
+          <button type="button" aria-label="Второй слайд"></button>
+          <button type="button" aria-label="Третий слайд"></button>
         </div>
       </section>
       <section class="section-categories container">
@@ -254,10 +256,10 @@
             <h2 class="header-1 header-1--special">О нас</h2>
             <p class="paragraph paragraph--special">Огромный выбор гаджетов не оставит равнодушным гика,<br/> который есть в каждом из нас.</p>
             <p class="paragraph paragraph--special">Мы можем доставить ваш товар в самые отдаленные точки<br/> России! DEVICE работает со многими транспортными компаниями:</p>
-            <ul class="default-list">
-              <li class="default-item"><b>Деловые линии</b></li>
-              <li class="default-item"><b>Автотрейдинг</b></li>
-              <li class="default-item"><b>ЖелДорЭкспедиция</b></li>
+            <ul class="list-default">
+              <li class="list-default-item"><b>Деловые линии</b></li>
+              <li class="list-default-item"><b>Автотрейдинг</b></li>
+              <li class="list-default-item"><b>ЖелДорЭкспедиция</b></li>
             </ul>
             <a class="button button--big" href="#">Подробнее о нас</a>
         </div>
