@@ -46,6 +46,7 @@
     --basic-grey-lighter: #ebebeb;
     --basic-grey: #e5e5e5;
     --basic-grey-dark: #dcdcdc;
+    --basic-grey-lightest: #f2f2f2;
     --basic-white: #ffffff;
 
     --extra-yellow-dark: #f0c52e;
@@ -297,6 +298,7 @@ label.button input {
     text-transform: uppercase;
     background-color: var(--extra-yellow-light);
     outline: none;
+    cursor: pointer;
 }
 .from-button:hover {
     background-color: var(--basic-black);
@@ -1037,4 +1039,134 @@ label.button input {
 .footer-social-media-list .link:active,
 .footer-social-media-list .link:focus {
     opacity: 0.3;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    margin: auto;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+    background-position: 0 0;
+    background-repeat: repeat;
+    box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal write-us */
+.modal-write-us {
+    max-width: 960px;
+    top: 120px;
+    bottom: auto;
+    padding: 0;
+}
+.write-us-form {
+    margin: 0;
+    padding-top: 92px;
+    padding-bottom: 60px;
+}
+.write-us-login {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: max-content max-content;
+    justify-content: center;
+    column-gap: 40px;
+}
+.modal-write-us-item {
+    margin: 0;
+}
+.modal-write-us-item label {
+    display: block;
+    font-family: var(--font-family-special-bold);
+    font-size: 18px;
+}
+.write-us-form textarea {
+    width: 740px;
+    height: 151px;
+    margin: 10px 0 45px 0;
+    padding: 16px 0 0 20px;
+    border: none;
+    resize: none;
+    outline: none;
+    background-color: var(--basic-grey-lightest);
+}
+.modal-button--short {
+    height: 40px;
+    padding: 0;
+}
+.modal-button--short::after {
+    background-color: var(--extra-yellow-light);
+}
+.modal-button--short:hover,
+.modal-button--short:focus {
+    background-color: var(--extra-yellow-light);
+}
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(../img/button_close.svg);
+    opacity: 0.6;
+}
+.modal-close:hover {
+    opacity: 1;
+}
+.modal-close:active,
+.modal-close:focus {
+    opacity: 0.3;
+}
+.write-us-text-space {
+    display: grid;
+    justify-content: center;
+    padding-top: 32px;
+}
+.write-us-text-space button {
+    display: block;
+    max-width: 200px;
+}
+
+.write-us-form input[type="text"],
+.write-us-form input[type="email"] {
+    font: inherit;
+    background-color: var(--basic-grey-lightest);
+    border: none;
+    padding: 16px 20px;
+}
+.write-us-form input[type="text"],
+.write-us-form input[type="email"] {
+    width: 340px;
+    height: 50px;
+    padding: 0 0 0 20px;
+    margin-top: 10px;
+}
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.write-us-form input[type="submit"] {
+    display: grid;
+    justify-content: start;
+}
+
+/* Modal modal-map */
+.modal-map {
+    display: none;
+    max-width: 994px;
+    top: 120px;
+    bottom: auto;
+    padding: 0;
+}
+.modal-map button {
+    display: none;
 }
