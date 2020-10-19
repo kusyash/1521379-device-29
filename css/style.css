@@ -436,7 +436,6 @@ label.button input {
 }
 .slider-list {
     margin: 0;
-    padding: 0;
     width: 100%;
     counter-reset: main-slider-counter;
     list-style-type: decimal-leading-zero;
@@ -445,8 +444,9 @@ label.button input {
     display: none;
 }
 .slide-current {
-    display: grid;
-    grid-template-columns: 1fr max-content;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
 }
 .slider-item--active {
     display: grid;
