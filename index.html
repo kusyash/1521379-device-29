@@ -8,15 +8,17 @@
   </head>
   <body class="page-body">
     <header class="main-header">
-      <div class="container-inner">
+      <div class="main-header-container container-inner">
         <a class="main-header-logo link" href="index.html">
           <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс">
         </a>
         <nav class="main-navigation">
-          <div class="site-search">
-            <input class="search-field" placeholder="Поиск по сайту">
-            <button class="from-button" type="submit">Найти</button>
-          </div>
+          <form class="site-search" action="" method="get">
+            <div class="site-search-box">
+              <input class="field-search" placeholder="Поиск по сайту">
+              <button class="form-button" type="submit">Найти</button>
+            </div>
+          </form>
           <ul class="user-navigation-list">
             <li><a class="link link-user" href="#">Войти</a></li>
             <li><a class="link link-compare" href="#">Сравнить</a></li>
@@ -25,51 +27,47 @@
         </nav>
         <nav class="site-navigation">
           <ul class="site-navigation-list">
-            <li>
-              <ul class="site-navigation-sub-list">
+            <li class="site-navigation-item">
+              <ul class="site-navigation-sub-list container-inner">
                 <li>
-                  <a class="link-inner" href="#">Виртуальная реальность</a>
+                  <a class="link" href="#">Виртуальная реальность</a>
                 </li>
                 <li>
-                  <a class="link-inner" href="#">Моноподы для селфи</a>
+                  <a class="link" href="#">Моноподы для селфи</a>
                 </li>
                 <li>
-                  <a class="link-inner" href="#">Экшн-камеры</a>
+                  <a class="link" href="#">Экшн-камеры</a>
                 </li>
                 <li>
-                  <a class="link-inner" href="#">Фитнес-браслеты</a>
+                  <a class="link" href="#">Фитнес-браслеты</a>
                 </li>
                 <li>
-                  <a class="link-inner" href="#">Умные часы</a>
+                  <a class="link" href="#">Умные часы</a>
                 </li>
                 <li>
-                  <a class="link-inner" href="#">Квадрокоптер</a>
+                  <a class="link" href="#">Квадрокоптер</a>
                 </li>
               </ul>
-              <a class="site-navigation-list-link" href="catalog.html">
-                <span class="header-2">Каталог товаров</span>
-              </a>
+              <a class="header-2" href="catalog.html">Каталог товаров</a>
             </li>
-            <li>
+            <li class="site-navigation-item">
               <a class="header-2" href="#">Доставка</a>
             </li>
-            <li>
+            <li class="site-navigation-item">
               <a class="header-2" href="#">Гарантия</a>
             </li>
-            <li>
-              <a class="header-2" href="#">Контакты</a>
-            </li>
+            <li class="site-navigation-item"><a class="header-2" href="#">Контакты</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="page-content">
-      <section class="main-slider container alt-text-content">
+      <section class="main-slider container">
         <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
         <!-- Главный слайдер с товарами -->
         <ol class="slider-list">
           <!-- Первый слайд -->
-          <li class="slider-item slide-current">
+          <li class="slider-item slider-item--active">
             <div class="slider-image">
             <a class="slider-item-link" href="#">
               <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">
@@ -77,7 +75,7 @@
             </div>
             <div class="slider-description">
               <h2 class="header-1 header-1--slider">Делай селфи,<br/> как Бен Стиллер!</h2>
-              <p class="paragraph">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              <p class="paragraph">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
               <a class="button button--big" href="#">Подробнее</a>
               <ul class="slider-info">
                 <li class="slider-info-item">
@@ -113,7 +111,6 @@
               </li>
             </ul>
             </div>
-            <span class="section-slider-decoration">02</span>
           </li>
           <!-- Третий слайд -->
           <li class="slider-item">
@@ -137,7 +134,6 @@
               </li>
             </ul>
             </div>
-            <span class="section-slider-decoration">03</span>
           </li>
         </ol>
         <div class="slider-navigation section-slider-pagination">
@@ -224,11 +220,13 @@
               </li>
               <li class="tabs-item">
                 <h2 class="header-1 header-1--special">Гарантия</h2>
-                <p class="paragraph paragraph--special">-</p>
+                <p class="paragraph paragraph--special">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                <img class="tabs-item-icon" src="img/warranty.svg" width="136" height="164" alt="Доставка"/>
               </li>
               <li class="tabs-item">
                 <h2 class="header-1 header-1--special">Кредит</h2>
-                <p class="paragraph paragraph--special">-</p>
+                <p class="paragraph paragraph--special">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                <img class="tabs-item-icon" src="img/credit.svg" width="136" height="164" alt="Доставка"/>
               </li>
             </ul>
         </div>
@@ -252,7 +250,7 @@
           </ul>
       </section>
       <section class="section-company container text-content">
-        <div class="section-company-about">
+        <div class="section-company-about decor-line--black">
             <h2 class="header-1 header-1--special">О нас</h2>
             <p class="paragraph paragraph--special">Огромный выбор гаджетов не оставит равнодушным гика,<br/> который есть в каждом из нас.</p>
             <p class="paragraph paragraph--special">Мы можем доставить ваш товар в самые отдаленные точки<br/> России! DEVICE работает со многими транспортными компаниями:</p>
@@ -263,7 +261,7 @@
             </ul>
             <a class="button button--big" href="#">Подробнее о нас</a>
         </div>
-        <div class="section-company-contacts">
+        <div class="section-company-contacts decor-line--black">
             <h2 class="header-1 header-1--special">Контакты</h2>
             <p class="paragraph paragraph--special">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br> проверить работоспособность покупки. Всякое бывает.</p>
             <img src="img/map-1.jpg" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15"/>
@@ -310,7 +308,7 @@
         </section>
         <section class="footer-social-media">
           <h2 class="visually-hidden">Мы в соцсетях</h2>
-          <div>&nbsp;</div>
+          <div class="decor-line decor-line-yellow">&nbsp;</div>
           <ul class="footer-social-media-list">
             <li>
               <a class="link link-social-media" href="#">
@@ -337,33 +335,32 @@
       <h2 class="visually-hidden">Меню каталога товаров</h2>
       <button type="button">Закрыть</button>
     </section> -->
-    <section class="modal container modal-write-us">
+    <section class="modal modal-write-us" style="display: none;">
       <!-- Здесь будет поле для заполнения формы -->
-      <form class="write-us-form" action="#" method="post">
+      <form class="form-base form-write-us modal-content" action="/Projects/1521379-device-29/index.html" method="post">
         <h2 class="visually-hidden">Напишите нам</h2>
-        <div class="write-us-login">
-          <p class="modal-write-us-item">
-            <label for="write-us-name">Ваше имя</br></label>
+        <div class="grid-columns-pair">
+          <p class="modal-field">
+            <label for="write-us-name">Ваше имя:</label>
             <input id="write-us-name" type="text" name="name" placeholder="Имя Фамилия">
           </p>
-          <p class="modal-write-us-item">
-            <label class="write-us-login" for="login-login">Ваш e-mail</br></label>
-            <input class="write-us-login" id="login-login" type="email" name="login" placeholder="email@example.com">
+          <p class="modal-field">
+            <label for="write-us-email">Ваш e-mail:</label>
+            <input id="write-us-email" type="email" name="login" placeholder="email@example.com">
           </p>
         </div>
-        <div class="write-us-text-space">
-          <p class="modal-write-us-item">
-            <label>Текст письма</br></label>
-            <textarea name="comment" cols="76" rows="7" placeholder="В свободной форме"></textarea></p>
-            <button class="button modal-button--short" type="submit">Отправить</button>
-        </div>
+        <p class="modal-field">
+          <label for="write-us-message">Текст письма:</label>
+          <textarea id="write-us-message" name="message" rows="7" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button button--short button--yellow-light" type="submit">Отправить</button>
       </form>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
     <section class="modal container modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <iframe src="img/map-big-1.png" width="994" height="593" alt="Карта офиса по адресу улица Строителей, 15"></iframe>
-      <button type="button">Закрыть</button>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1124022924637!2d37.52777754366526!3d55.687033529102294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1603189652927!5m2!1sru!2sru" width="994" height="593" allowfullscreen title="Карта офиса по адресу улица Строителей, 15"></iframe>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
   </body>
 </html>

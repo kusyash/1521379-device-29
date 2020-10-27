@@ -7,58 +7,60 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="main-header container">
-      <a class="main-header-logo link" href="index.html">
-        <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс">
-      </a>
-      <nav class="main-navigation">
-        <div>Поиск по сайту</div>
-        <ul class="user-navigation-list">
-          <li><a class="link link-user" href="#">Валентин Петухов</a> <a class="link" href="#">Выйти</a></li>
-          <li><a class="link link-compare" href="#">Сравнить</a></li>
-          <li><a class="link link-cart" href="#">Корзина</a></li>
-        </ul>
-      </nav>
-      <nav class="site-navigation">
-        <ul class="site-navigation-list">
-          <li>
-            <a href="catalog.html">
-              <span class="header-2">Каталог товаров</span>
-              <img  width="22" height="22" src="img/icon_plus.svg" alt="Меню">
-            </a>
-            <ul class="site-navigation-sub-list">
-              <li>
-                <a class="link-inner" href="#">Виртуальная реальность</a>
-              </li>
-              <li>
-                <a class="link-inner" href="#">Моноподы для селфи</a>
-              </li>
-              <li>
-                <a class="link-inner" href="#">Экшн-камеры</a>
-              </li>
-              <li>
-                <a class="link-inner" href="#">Фитнес-браслеты</a>
-              </li>
-              <li>
-                <a class="link-inner" href="#">Умные часы</a>
-              </li>
-              <li>
-                <a class="link-inner" href="#">Квадрокоптер</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="header-2" href="#">Доставка</a>
-          </li>
-          <li>
-            <a class="header-2" href="#">Гарантия</a>
-          </li>
-          <li>
-            <a class="header-2" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>   
+    <header class="main-header">
+      <div class="main-header-container container-inner">
+        <a class="main-header-logo link" href="index.html">
+          <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс">
+        </a>
+        <nav class="main-navigation">
+          <form class="site-search" action="" method="get">
+            <div class="site-search-box">
+              <input class="field-search" placeholder="Поиск по сайту">
+              <button class="form-button" type="submit">Найти</button>
+            </div>
+          </form>
+          <ul class="user-navigation-list">
+            <li><a class="link link-user" href="#">Валентин Петухов</a> <a class="link" href="#">Выйти</a></li>
+            <li><a class="link link-compare" href="#">Сравнить</a></li>
+            <li><a class="link link-cart" href="#">Корзина</a></li>
+          </ul>
+        </nav>
+        <nav class="site-navigation">
+          <ul class="site-navigation-list">
+            <li class="site-navigation-item">
+              <ul class="site-navigation-sub-list container-inner">
+                <li>
+                  <a class="link" href="#">Виртуальная реальность</a>
+                </li>
+                <li>
+                  <a class="link" href="#">Моноподы для селфи</a>
+                </li>
+                <li>
+                  <a class="link" href="#">Экшн-камеры</a>
+                </li>
+                <li>
+                  <a class="link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li>
+                  <a class="link" href="#">Умные часы</a>
+                </li>
+                <li>
+                  <a class="link" href="#">Квадрокоптер</a>
+                </li>
+              </ul>
+              <a class="header-2" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-navigation-item">
+              <a class="header-2" href="#">Доставка</a>
+            </li>
+            <li class="site-navigation-item">
+              <a class="header-2" href="#">Гарантия</a>
+            </li>
+            <li class="site-navigation-item"><a class="header-2" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <main class="page-content">
       <div class="catalog-name container">
         <h1 class="header-1">Моноподы для селфи</h1>
@@ -75,13 +77,65 @@
         </ul>
       </div>
       <section class="filter-container container">
-        <div class="filter-header">
-          <h3 class="header-3">Фильтр:</h3>
-        </div>
-        <!-- Здесь будет форма фильтра -->
-        <br/>
-        <br/>
-        <br/>
+        <h3 class="header-3">Фильтр:</h3>
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Стоимость</legend>
+          </fieldset>
+          <fieldset>
+            <legend>Цвет</legend>
+            <ul>
+              <li class="filter-option filter-checkbox">
+                <label>
+                  <input class="filter-input-checkbox filter-input" type="checkbox" name="color[]" checked>
+                  Черный
+                </label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <label>
+                  <input class="filter-input-checkbox filter-input" type="checkbox" name="color[]">
+                  Белый
+                </label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <label>
+                  <input class="filter-input-checkbox filter-input" type="checkbox" name="color[]" checked>
+                  Синий
+                </label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <label>
+                  <input class="filter-input-checkbox filter-input" type="checkbox" name="color[]" checked>
+                  Красный
+                </label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <label>
+                  <input class="filter-input-checkbox filter-input" type="checkbox" name="color[]">
+                  Розовый
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Bluetooth</legend>
+            <ul>
+              <li class="filter-option filter-radio">
+                <label>
+                  <input class="filter-input-radio filter-input" type="radio" name="product-availability" value="available" checked>
+                  Есть
+                </label>
+              </li>
+              <li class="filter-option filter-radio">
+                <label>
+                  <input class="filter-input-radio filter-input" type="radio" name="product-availability" value="not-available">
+                  Нет
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit" class="filter-button button">Показать</button>
+        </form>
       </section>
       <section class="catalog-sorting container">
         <h3 class="header-3">Сортировка:</h3>
@@ -180,10 +234,8 @@
           </a>
           <ul class="footer-personal-links">
             <li>
-              <a class="link link-personal" href="#">Валентин Петухов</a>
-            </li>
-            <li>
-              <a class="link link-log-in" href="#">Войти</a>
+              <a class="link link-user" href="#">Валентин Петухов</a> 
+              <a class="link" href="#">Выйти</a>
             </li>
             <li>
               <a class="link link-compare" href="#">Сравнить</a>
@@ -213,7 +265,7 @@
         </section>
         <section class="footer-social-media">
           <h2 class="visually-hidden">Мы в соцсетях</h2>
-          <div>&nbsp;</div>
+          <div class="decor-line decor-line-yellow">&nbsp;</div>
           <ul class="footer-social-media-list">
             <li>
               <a class="link link-social-media" href="#">
@@ -234,6 +286,6 @@
           <a class="link footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
         </section>
       </div>
-    </footer>  
+    </footer>
   </body>
 </html>
