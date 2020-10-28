@@ -98,6 +98,16 @@
     background-color: var(--basic-white);
 }
 
+.page-title {
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.page-title h1 {
+    margin-bottom: 29px;
+    margin-top: 45px;
+}
+
 .page a {
     text-decoration: none;
     color: inherit;
@@ -259,6 +269,27 @@ label.button input {
     outline: none;
     padding: 0 20px;
 }
+.form-base textarea:hover,
+.form-base input[type="text"]:hover, 
+.form-base input[type="email"]:hover {
+    background-color: var(--basic-grey-lighter);
+}
+.header-2:active,
+.header-2:focus
+.form-base textarea:active,
+.form-base textarea:focus,
+.form-base input[type="text"]:active,
+.form-base input[type="text"]:focus,  
+.form-base input[type="email"]:active,
+.form-base input[type="email"]:focus {
+    background-color: var(--basic-white);
+    border: 2px solid var(--extra-yellow-light);   
+}
+
+.modal-field[data-error] input {
+    background-color: var(--special-pink);
+}
+
 .form-base textarea {
     min-height: 100px;
     height: auto;
@@ -417,6 +448,9 @@ label.button input {
 .user-navigation-list li:last-child {
     justify-self: end;
 }
+.site-navigation--main {
+    padding-bottom: 49px;
+}
 .site-navigation {
     padding-bottom: 15px;
 }
@@ -450,7 +484,7 @@ label.button input {
     left: 0;
     padding-top: 29px;
     margin-top: 22px;
-    padding-bottom: 40px;
+    padding-bottom: 27px;
     background-color: var(--extra-yellow-light);
 }
 .site-navigation-item:hover .site-navigation-sub-list {
@@ -471,22 +505,6 @@ label.button input {
 }
 .site-navigation-sub-list li {
     padding: 0 0 14px;
-}
-
-
-/* Content ?? */
-.information {
-    position: relative;
-}
-.information::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    background-color: var(--basic-grey);
-    width: 100%;
-    height: calc(100% - 115px);
-    margin-top: 115px;
 }
 
 /* Главная страница */
@@ -565,25 +583,26 @@ label.button input {
 }
 .slider-description p {
     margin: 0;
-    padding: 27px 0 50px 0;
+    padding: 27px 0 51px 0;
 }
 
 .slider-info {
     display: flex;
     flex-wrap: wrap;
-    gap: 62px;
-    padding: 0px;
-    margin: 0 auto;
+    padding: 0;
 }
-
 .slider-info-item {
     font-family: var(--font-family-special-light);
     letter-spacing: 0.1em;
     list-style: none;
+    padding-right: 62px;
+}
+.slider-info-item:last-child {
+    padding-right: 0;
 }
 .slider-info-item p {
     margin: 0;
-    padding: 52px 0 12px 0;
+    padding: 51px 0 12px 0;
     font-size: 36px;
     line-height: 42px;
     letter-spacing: 0.1em;
@@ -605,24 +624,40 @@ label.button input {
     justify-content: space-between;
     right: 0;
     top: 360px;
-    padding-right: 88px;
+    padding-right: 89px;
     width: 72px;
     height: 12px;
 }
+
 .section-slider-pagination button {
     padding: 0;
-    width: 12px;
-    height: 12px;
-    background-image: url(../img/slider-pagination-not-active.svg);
-    background-repeat: no-repeat;
-    background-color: var(--basic-white);
     border: none;
-    border-radius: 50px;
+    background-color: var(--basic-white);
     cursor: pointer;
     outline: none;
 }
-.section-slider-pagination .current {
-    background-image: url(../img/slider-pagination-active.svg);
+.section-slider-pagination button::before{
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: relative;
+    z-index: 10;
+    display: block;
+    box-sizing: border-box;
+    top: 0;
+    left: 1.4px;
+    border-radius: 50%;
+    border: 1px solid var(--basic-black);
+}
+.section-slider-pagination .slider-current::after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    top: 3px;
+    left: 4px;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid var(--basic-black);
 }
 
 .section-categories {
@@ -640,7 +675,6 @@ label.button input {
 .category-item {
     max-width: 160px;
 }
-
 .category-item .category-icon  {
     display: grid;
     width: 160px;
@@ -670,8 +704,11 @@ label.button input {
     letter-spacing: 0.05em;
     font-size: 18px;
     line-height: 22px;
-    margin-top: 38px;
+    margin-top: 39px;
     margin-bottom: 0;
+}
+.category-item:nth-child(4) .category-name {
+    letter-spacing: 0;
 }
 .partners {
     margin-bottom: 87px;
@@ -716,15 +753,16 @@ label.button input {
 }
 .text-content h2 {
     margin: 0;
-    padding: 50px 0 40px 0;
+    padding: 48px 0 40px 0;
 }
 .text-content p {
     margin: 0;
     padding: 0 0 40px 0;
+    letter-spacing: -0.02em;
 }
 .text-content .list-default {
     margin: 0;
-    padding: 4px 0 69px 15px;
+    padding: 5px 0 68px 14px;
 }
 .text-content .list-default-item {
     padding: 15px 0 0 18px;
@@ -738,7 +776,7 @@ label.button input {
     position: relative;
     z-index: 1;
     margin-bottom: 90px;
-    padding-bottom: 97px;
+    padding-bottom: 92px
 }
 .main-information::before {
     content: '';
@@ -806,21 +844,37 @@ label.button input {
     display:none
 }
 .tabs-item p {
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     margin-top: 40px;
+    line-height: 30px;
 }
 
-/* Каталог */
 .page-content .breadcrumbs {
     grid-column: 1 / -1;
-    margin-bottom: 40px;
-    outline-offset: -5px;
-  }
+    margin-bottom: 50px;
+}
   
 .breadcrumbs {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
+}
+.breadcrumb {
+    margin-right: 37px;
+    position: relative;
+}
+.breadcrumb::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: -21px;
+    width: 4px;
+    height: 7px;
+    background-repeat: no-repeat;
+    background-image: url(../img/vector.svg);
 }
 .breadcrumbs .label {
     font-size: 14px;
@@ -836,9 +890,23 @@ label.button input {
     opacity: 1;
 }
 
+
+/* Каталог */
+.page-catalog {
+    display: grid;
+    grid-auto-flow: column;
+}
+.container-catalog {
+    width: 760px;
+}
 /* Фильтр */
-.filter-container{
+.filter-container {
+    display: grid;
+    justify-items: right;
+    align-content: start;
     background-color: var(--basic-grey);
+    width: 468px;
+    height: 1214px;
 }
 .filter-header {
     background-color: var(--basic-grey-dark);
@@ -1181,6 +1249,7 @@ label.button input {
 
 /* Modal write-us */
 .modal-write-us {
+    display: none;
     --grid-columns-pair-gap: 40px 
 }
 

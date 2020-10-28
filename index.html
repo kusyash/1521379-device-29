@@ -13,7 +13,7 @@
           <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс">
         </a>
         <nav class="main-navigation">
-          <form class="site-search" action="" method="get">
+          <form class="site-search" action="index.html" method="get">
             <div class="site-search-box">
               <input class="field-search" placeholder="Поиск по сайту">
               <button class="form-button" type="submit">Найти</button>
@@ -33,16 +33,16 @@
                   <a class="link" href="#">Виртуальная реальность</a>
                 </li>
                 <li>
-                  <a class="link" href="#">Моноподы для селфи</a>
-                </li>
-                <li>
-                  <a class="link" href="#">Экшн-камеры</a>
-                </li>
-                <li>
                   <a class="link" href="#">Фитнес-браслеты</a>
                 </li>
                 <li>
+                  <a class="link" href="#">Моноподы для селфи</a>
+                </li>
+                <li>
                   <a class="link" href="#">Умные часы</a>
+                </li>
+                <li>
+                  <a class="link" href="#">Экшн-камеры</a>
                 </li>
                 <li>
                   <a class="link" href="#">Квадрокоптер</a>
@@ -137,7 +137,7 @@
           </li>
         </ol>
         <div class="slider-navigation section-slider-pagination">
-          <button class="current" type="button" aria-label="Первый слайд"></button>
+          <button class="slider-current" type="button" aria-label="Первый слайд"></button>
           <button type="button" aria-label="Второй слайд"></button>
           <button type="button" aria-label="Третий слайд"></button>
         </div>
@@ -155,7 +155,7 @@
             <li class="category-item">
               <a class="category-link" href="#">
                 <p class="category-icon"><img src="img/monopods-for-selfie.svg" width="86" height="117" alt="Моноподы для селфи"></p>
-                <p class="category-name">Моноподы для селфи</p>
+                <p class="category-name">Моноподы</br> для селфи</p>
               </a> 
             </li>
             <li class="category-item">
@@ -259,7 +259,7 @@
               <li class="list-default-item"><b>Автотрейдинг</b></li>
               <li class="list-default-item"><b>ЖелДорЭкспедиция</b></li>
             </ul>
-            <a class="button button--big" href="#">Подробнее о нас</a>
+            <a class="button button--short" href="#">Подробнее о нас</a>
         </div>
         <div class="section-company-contacts decor-line--black">
             <h2 class="header-1 header-1--special">Контакты</h2>
@@ -330,21 +330,16 @@
         </section>
       </div>
     </footer>
-    <!--
-    <section class="modal container modal-catalog-menu">
-      <h2 class="visually-hidden">Меню каталога товаров</h2>
-      <button type="button">Закрыть</button>
-    </section> -->
-    <section class="modal modal-write-us" style="display: none;">
+    <section class="modal modal-write-us">
       <!-- Здесь будет поле для заполнения формы -->
-      <form class="form-base form-write-us modal-content" action="/Projects/1521379-device-29/index.html" method="post">
+      <form class="form-base form-write-us modal-content" action="index.html" method="post">
         <h2 class="visually-hidden">Напишите нам</h2>
         <div class="grid-columns-pair">
-          <p class="modal-field">
+          <p class="modal-field" data-error="">
             <label for="write-us-name">Ваше имя:</label>
             <input id="write-us-name" type="text" name="name" placeholder="Имя Фамилия">
           </p>
-          <p class="modal-field">
+          <p class="modal-field" data-error="">
             <label for="write-us-email">Ваш e-mail:</label>
             <input id="write-us-email" type="email" name="login" placeholder="email@example.com">
           </p>
