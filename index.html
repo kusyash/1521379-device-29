@@ -155,7 +155,7 @@
             <li class="category-item">
               <a class="category-link" href="#">
                 <p class="category-icon"><img src="img/monopods-for-selfie.svg" width="86" height="117" alt="Моноподы для селфи"></p>
-                <p class="category-name">Моноподы</br> для селфи</p>
+                <p class="category-name">Моноподы <br> для селфи</p>
               </a> 
             </li>
             <li class="category-item">
@@ -191,22 +191,16 @@
             <h2 class="visually-hidden">Информация</h2>
             <ul class="tabs-menu">
               <li class="tabs-menu-item tabs-menu-item--active">
-                <label class="button button--short">
-                  <input name="main-information-item" type="radio" value="delivery" checked />
-                  Доставка
-                </label>
+                <input class="tabs-menu-input tabs-input" name="main-information-item" type="radio" value="delivery" id="main-information-item-delivery" checked>  
+                <label class="button button--short" for="main-information-item-delivery">Доставка</label>
               </li>
               <li class="tabs-menu-item">
-                <label class="button button--short">
-                  <input name="main-information-item" type="radio" value="guarantee" />
-                  Гарантия
-                </label>
+                <input class="tabs-menu-input tabs-input" name="main-information-item" type="radio" value="guarantee" id="main-information-item-guarantee">
+                <label class="button button--short" for="main-information-item-guarantee">Гарантия</label> 
               </li>
               <li class="tabs-menu-item">
-                <label class="button button--short">
-                  <input name="main-information-item" type="radio" value="credit" />
-                  Кредит
-                </label>
+                <input class="tabs-menu-input tabs-input" name="main-information-item" type="radio" value="credit" id="main-information-item-credit">
+                <label class="button button--short" for="main-information-item-credit">Кредит</label>    
               </li>
             </ul>
           </div>
@@ -265,7 +259,7 @@
             <h2 class="header-1 header-1--special">Контакты</h2>
             <p class="paragraph paragraph--special">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br> проверить работоспособность покупки. Всякое бывает.</p>
             <img src="img/map-1.jpg" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15"/>
-            <a class="button button--big" href="#">Напишите нам</a>
+            <a class="button button--big link-write-us" href="#">Напишите нам</a>
         </div>
       </section>
     </main>    
@@ -335,13 +329,13 @@
       <form class="form-base form-write-us modal-content" action="index.html" method="post">
         <h2 class="visually-hidden">Напишите нам</h2>
         <div class="grid-columns-pair">
-          <p class="modal-field" data-error="">
+          <p class="modal-field">
             <label for="write-us-name">Ваше имя:</label>
             <input id="write-us-name" type="text" name="name" placeholder="Имя Фамилия">
           </p>
-          <p class="modal-field" data-error="">
+          <p class="modal-field">
             <label for="write-us-email">Ваш e-mail:</label>
-            <input id="write-us-email" type="email" name="login" placeholder="email@example.com">
+            <input id="write-us-email" type="email" name="email" placeholder="email@example.com">
           </p>
         </div>
         <p class="modal-field">
@@ -357,5 +351,7 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1124022924637!2d37.52777754366526!3d55.687033529102294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1603189652927!5m2!1sru!2sru" width="994" height="593" allowfullscreen title="Карта офиса по адресу улица Строителей, 15"></iframe>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
+    <script src="js/popup.js"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>
