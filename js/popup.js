@@ -23,14 +23,14 @@ link.addEventListener("click", function (evt) {
     
     let hasFocus = false;
 
-    if(storage_name && !name.value) {
+    if(storage_name) {
         name.value = storage_name;
     } else {
         name.focus();
         hasFocus = true;
     }
     
-    if(storage_email && !email.value) {
+    if(storage_email) {
         email.value = storage_email;
     } else if(!hasFocus) {
         email.focus();
@@ -67,4 +67,4 @@ form.addEventListener("submit", function (evt) {
             localStorage.setItem("email", email.value);
         }
     }
-})
+});
