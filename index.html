@@ -65,7 +65,7 @@
       <section class="main-slider container">
         <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
         <!-- Главный слайдер с товарами -->
-        <ol class="slider-list">
+        <ul class="slider-list">
           <!-- Первый слайд -->
           <li class="slider-item slider-item--active">
             <div class="slider-image">
@@ -135,7 +135,7 @@
             </ul>
             </div>
           </li>
-        </ol>
+        </ul>
         <div class="slider-navigation section-slider-pagination">
           <button class="slider-current" type="button" aria-label="Первый слайд"></button>
           <button type="button" aria-label="Второй слайд"></button>
@@ -333,16 +333,16 @@
         <div class="grid-columns-pair">
           <p class="modal-field">
             <label for="write-us-name">Ваше имя:</label>
-            <input id="write-us-name" type="text" name="name" placeholder="Имя Фамилия">
+            <input id="write-us-name" maxlength="100" type="text" name="name" placeholder="Имя Фамилия">
           </p>
           <p class="modal-field">
             <label for="write-us-email">Ваш e-mail:</label>
-            <input id="write-us-email" type="email" name="email" placeholder="email@example.com">
+            <input id="write-us-email" maxlength="100" type="email" name="email" placeholder="email@example.com">
           </p>
         </div>
         <p class="modal-field">
           <label for="write-us-message">Текст письма:</label>
-          <textarea id="write-us-message" name="message" rows="7" placeholder="В свободной форме"></textarea>
+          <textarea id="write-us-message" maxlength="1000" name="message" rows="7" placeholder="В свободной форме"></textarea>
         </p>
         <button class="button button--short button--yellow-light" type="submit">Отправить</button>
       </form>

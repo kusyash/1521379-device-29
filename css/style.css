@@ -260,7 +260,8 @@
     cursor: pointer;
 }
 .link:focus,
-.link:active {
+.link:active,
+.link--disable {
     opacity: 0.3;
 }
 
@@ -269,12 +270,16 @@
 }
 
 /* Forms */
+.form-base {
+    --field-bg-color: var(--basic-grey-lightest);
+    --field-border-color: transparent;
+}
 .form-base textarea,
 .form-base input[type="text"],
 .form-base input[type="email"] {
     font: inherit;
-    background-color: var(--basic-grey-lightest);
-    border: 2px solid transparent;
+    background-color: var(--field-bg-color);
+    border: 2px solid var(--field-border-color);
     box-sizing: border-box;
     height: 50px;
     outline: none;
@@ -283,7 +288,7 @@
 .form-base textarea:hover,
 .form-base input[type="text"]:hover, 
 .form-base input[type="email"]:hover {
-    background-color: var(--basic-grey-lighter);
+    --field-bg-color: var(--basic-grey-lighter);
 }
 .form-base textarea:active,
 .form-base textarea:focus,
@@ -291,8 +296,14 @@
 .form-base input[type="text"]:focus,  
 .form-base input[type="email"]:active,
 .form-base input[type="email"]:focus {
-    background-color: var(--basic-white);
-    border: 2px solid var(--extra-yellow-light);   
+    --field-bg-color: --basic-white;
+    --field-border-color: var(--extra-yellow-light);
+}
+
+.form-base textarea.field-invalid,
+.form-base input[type="text"].field-invalid,
+.form-base input[type="email"].field-invalid {
+    --field-bg-color: var(--special-pink);
 }
 
 .form-base textarea {
@@ -1410,6 +1421,9 @@
     right: 0;
     left: 0;
 }
+.footer-links .link-logout {
+    padding-left: 25px;
+}
 .footer-links .link-compare {
     content: "";
     width: 16px;
@@ -1505,6 +1519,12 @@
 }
 .modal--show {
     display: block;
+    animation-name: bounce;
+    animation-duration: 0.6s;
+}
+.modal--error {
+    animation-name: shake;
+    animation-duration: 0.6s;
 }
 .modal-content {
     padding: 82px 100px 60px;
@@ -1545,9 +1565,6 @@
 .modal-write-us {
     --grid-columns-pair-gap: 40px 
 }
-.modal-field[data-error] input {
-    background-color: var(--special-pink);
-}
 
 /* Modal modal-map */
 .modal-map {
@@ -1559,4 +1576,30 @@
 .modal-map iframe {
     display: block;
     border: none;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+    70%{ 
+        transform: translateY(30px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0px);
+    }
+    10%, 30%, 50%, 70%, 90% { 
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
 }
