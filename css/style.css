@@ -492,7 +492,7 @@
 .site-navigation-sub-list {
     display: none;
     grid-template-columns: max-content max-content;
-    column-gap: 61px;
+    column-gap: 56px;
     position: absolute;
     list-style: none;
     z-index: 10;
@@ -790,7 +790,7 @@
     position: relative;
     z-index: 1;
     margin-bottom: 90px;
-    padding-bottom: 92px
+    padding-bottom: 95px;
 }
 .main-information::before {
     content: '';
@@ -810,7 +810,7 @@
 .main-information-toggle {
     display: grid;
     grid-auto-flow: row;
-    padding-top: 54px;
+    padding-top: 53px;
     min-width: 284px;
 }
 .main-information-toggle::before {
@@ -820,7 +820,7 @@
     left: 649px;
     width: 7px;
     height: 320px;
-    top: -11px;
+    top: -12px;
     background-color: var(--basic-black);
 }
 .tabs-menu{
@@ -849,7 +849,7 @@
 }
 
 .tabs {
-    padding: 22px 0px;
+    padding: 20px 0px;
     margin: 0;
     list-style: none;
 }
@@ -953,7 +953,7 @@
     padding-bottom: 27px;
 }
 .filter-option {
-    padding-bottom: 19px;
+    padding-bottom: 14px;
 }
 .filter-option label {
     position: relative;
@@ -1011,38 +1011,38 @@
 .filter-input-radio + label::before {
     content: "";
     position: absolute;
+    display: block;
     left: 0;
     top: 0;
     width: 21px;
     height: 21px;
-    border: 2px solid var(--basic-black);
+    border: 2px solid currentColor;
     border-radius: 50%;
 }
 .filter-input-radio:checked + label::after {
     content: "";
     position: absolute;
+    display: block;
     top: 8px;
     left: 8px;
     width: 9px;
     height: 9px;
-    background-color: var(--basic-black);
+    background-color: currentColor;
     border-radius: 50%;
 }
-.filter-input-radio:hover + label::before,
-.filter-input-radio:hover + label::after {
-    border-color: rgba(0, 0, 0, 0.6);
+.filter-input-radio:not(:disabled):hover + label::before {
+    color: rgba(0, 0, 0, 0.6);
 }
-.filter-input-radio:focus + label::before,
-.filter-input-radio:active + label::before {
-    border-color: rgba(0, 0, 0, 1);
+.filter-input-radio:not(:disabled):hover + label::after {
+    opacity: 0.6;
 }
-.filter-input-checkbox:focus + label::after,
-.filter-input-checkbox:active + label::after {
-    border-color: rgba(0, 0, 0, 1);
+.filter-input-radio:not(:disabled):focus + label::before,
+.filter-input-radio:not(:disabled):active + label::before {
+    color: var(--basic-black);
 }
-.filter-input-radio:focus + label::after,
-.filter-input-radio:active + label::after {
-    border-color: rgba(0, 0, 0, 1);
+.filter-input-radio:not(:disabled):focus + label::after,
+.filter-input-radio:not(:disabled):active + label::after {
+    opacity: 1;
 }
 
 .catalog-filter-header {
@@ -1164,7 +1164,7 @@
     padding: 0 60px;
 }
 .catalog-sorting-by label {
-    margin: 0 14px;
+    margin: 0 13px;
 }
 .catalog-sorting-by input:not(:checked) + label {
     opacity: 0.3;
@@ -1290,6 +1290,28 @@
     letter-spacing: 0.05em;
 }
 
+.card-nameplate-new {
+    position: relative;
+}
+.card-nameplate-new::before {
+    content: 'NEW';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 29px;
+    right: 27px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    color: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    font-family: var(--font-family-special-bold);
+    font-size: 12px;
+    z-index: 20;
+}
+
 /* Страницы каталога */
 .catalog-pagination {
     background-color: var(--basic-grey-light);
@@ -1410,19 +1432,21 @@
     grid-auto-flow: column;
     column-gap: 41px;
 }
+
 .footer-links .link-user {
     content: "";
     width: 16px;
     height: 16px;
-    padding-left: 22px;
+    padding-left: 23px;
     background-repeat: no-repeat;
     background-image: url(../img/icon_user-yellow.svg);
-    background-position: left;
+    background-position-y: 4px;
+    background-position-x: left;
     right: 0;
     left: 0;
 }
 .footer-links .link-logout {
-    padding-left: 25px;
+    padding-left: 11px;
 }
 .footer-links .link-compare {
     content: "";
@@ -1431,7 +1455,8 @@
     padding-left: 24px;
     background-repeat: no-repeat;
     background-image: url(../img/icon_chart-yellow.svg);
-    background-position: left;
+    background-position-y: 4px;
+    background-position-x: left;
     right: 0;
     left: 0;
 }
@@ -1442,7 +1467,8 @@
     padding-left: 19px;
     background-repeat: no-repeat;
     background-image: url(../img/icon_cart-yellow.svg);
-    background-position: left;
+    background-position-y: 4px;
+    background-position-x: left;
     right: 0;
     left: 0;
 }
