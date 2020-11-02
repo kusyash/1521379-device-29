@@ -70,7 +70,7 @@ message.addEventListener("focus", function (evt) {
 
 form.addEventListener("submit", function (evt) {
     popup.classList.remove("modal--error");
-    popup.offsetWidth = popup.offsetWidth
+    popup.offsetWidth = popup.offsetWidth;
 
     if (!name.value || !email.value || !message.value) {
         evt.preventDefault();
