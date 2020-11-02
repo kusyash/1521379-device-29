@@ -261,7 +261,7 @@
 }
 .link:focus,
 .link:active,
-.link--disable {
+.link--inactively {
     opacity: 0.3;
 }
 
@@ -449,6 +449,10 @@
 .user-navigation-list .link-user {
     background-image: url(../img/icon_user-black.svg);
 }
+.user-navigation-list .link-logout,
+.footer-personal-links .link-logout {
+    padding-left: 12px;
+}
 .user-navigation-list .link-compare {
     background-image: url(../img/icon_chart-black.svg);
 }
@@ -491,7 +495,7 @@
 
 .site-navigation-sub-list {
     display: none;
-    grid-template-columns: max-content max-content;
+    grid-template-columns: repeat(3, max-content);
     column-gap: 56px;
     position: absolute;
     list-style: none;
@@ -524,6 +528,9 @@
 }
 
 /* Главная страница */
+main {
+    overflow: hidden;
+}
 .main-slider {
     position: relative;
     overflow: hidden;
@@ -609,7 +616,6 @@
 }
 .slider-info-item {
     font-family: var(--font-family-special-light);
-    letter-spacing: 0.1em;
     list-style: none;
     padding-right: 62px;
 }
@@ -638,6 +644,7 @@
     display: flex;
     position: absolute;
     justify-content: space-between;
+    align-content: flex-end;
     right: 89px;
     top: 360px;
     width: 72px;
@@ -746,10 +753,20 @@
 }
 
 .section-company  {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
     margin-bottom: 77px;
+}
+.decor-line--black {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 588px;
+}
+.decor-line--black .button {
+    margin-top: auto;
 }
 .decor-line--black::before {
     content: '';
@@ -776,13 +793,15 @@
 }
 .text-content .list-default {
     margin: 0;
-    padding: 5px 0 68px 14px;
+    padding-top: 5px;
+    padding-left: 14px;
 }
 .text-content .list-default-item {
     padding: 15px 0 0 18px;
 }
-.text-content img {
-    margin-bottom: 72px;
+.link-open-map {
+    display: inline-block;
+    margin-bottom: 73px;
 }
 
 /* Табы */
@@ -817,7 +836,7 @@
     content: '';
     display: block;
     position: absolute;
-    left: 649px;
+    left: 644px;
     width: 7px;
     height: 320px;
     top: -12px;
@@ -827,6 +846,7 @@
     list-style: none;
     padding: 0;
     position: relative;
+    display: block;
 }
 .tabs-menu-item {
     margin-bottom: 21px;
@@ -846,6 +866,10 @@
 .tabs-menu-item--active .button::after,
 .tabs-menu-item:active .button::after {
     display: none;
+}
+
+.tabs-menu-item .button {
+    min-width: 115px;
 }
 
 .tabs {
@@ -927,9 +951,21 @@
 /* Фильтр */
 .catalog-filter {
     display: grid;
+    position: relative;
     justify-items: right;
     align-content: start;
     background-color: var(--basic-grey);
+}
+.catalog-filter::before {
+    content: '';
+    display: block;
+    background-color: var(--basic-grey);
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100vw;
+    right: 0;
+    top: 0;
 }
 .filter {
     width: 200px;
@@ -1044,14 +1080,31 @@
 .filter-input-radio:not(:disabled):active + label::after {
     opacity: 1;
 }
+.filter-input-radio:disabled + label {
+    opacity: 0.25;
+    color: var(--basic-black);
+    cursor: default;
+}
 
 .catalog-filter-header {
+    position: relative;
     box-sizing: border-box;
     text-align: left;
     width: 100%;
     margin: 0;
     padding: 25px 68px 25px 60px;
     background-color: var(--basic-grey-dark);
+}
+.catalog-filter-header::before {
+    content: '';
+    display: block;
+    background-color: var(--basic-grey-dark);
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100vw;
+    right: 0;
+    top: 0;
 }
 .catalog-filter legend {
     font-family: var(--font-family-special-bold);
@@ -1145,10 +1198,22 @@
 
 .catalog-sorting {
     display: flex;
+    position: relative;
     align-items: center;
+    justify-items: center;
     box-sizing: border-box;
     padding: 25px 0 25px var(--catalog-space-left);
     background-color: var(--basic-grey);
+}
+.catalog-sorting::before {
+    content: '';
+    display: block;
+    background-color: var(--basic-grey);
+    position: absolute;
+    z-index: -1;
+    height: 70px;
+    width: 100vw;
+    left: 0;
 }
 .catalog-sorting h3 {
     margin: 0;
@@ -1185,7 +1250,8 @@
 .catalog-sorting-as label{
     display: inline-block;
     height: 20px;
-    font-size: 30px;
+    width: 26px;
+    font-size: 36px;
     overflow: hidden;
 }
 .catalog-sorting-as input:not(:checked) + label{
@@ -1290,10 +1356,10 @@
     letter-spacing: 0.05em;
 }
 
-.card-nameplate-new {
+.catalog-item-nameplate-new {
     position: relative;
 }
-.card-nameplate-new::before {
+.catalog-item-nameplate-new::before {
     content: 'NEW';
     position: absolute;
     display: flex;
@@ -1309,7 +1375,7 @@
     border: 2px solid rgba(0, 0, 0, 0.3);
     font-family: var(--font-family-special-bold);
     font-size: 12px;
-    z-index: 20;
+    z-index: 1;
 }
 
 /* Страницы каталога */
@@ -1319,16 +1385,18 @@
 }
 .catalog-pagination-list {
     list-style: none;
+    display: flex;
+    justify-content: stretch;
+    align-content: center;
     padding: 0;
     margin: 0;
     height: 71px;
-    display: flex;
-    justify-content: stretch;
 }
 
 .catalog-pagination-list li:first-child,
 .catalog-pagination-list li:last-child {
     flex-grow: 1;
+    flex-basis: 50%;
 }
 
 .catalog-pagination-list li:last-child {
@@ -1432,12 +1500,23 @@
     grid-auto-flow: column;
     column-gap: 41px;
 }
+.footer-personal-links .link {
+    opacity: 0.7;
+}
+.footer-personal-links .link:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.footer-personal-links .link:focus,
+.footer-personal-links .link:active {
+    opacity: 0.3;
+}
 
 .footer-links .link-user {
     content: "";
     width: 16px;
     height: 16px;
-    padding-left: 23px;
+    padding-left: 24px;
     background-repeat: no-repeat;
     background-image: url(../img/icon_user-yellow.svg);
     background-position-y: 4px;
@@ -1445,9 +1524,7 @@
     right: 0;
     left: 0;
 }
-.footer-links .link-logout {
-    padding-left: 11px;
-}
+
 .footer-links .link-compare {
     content: "";
     width: 16px;
