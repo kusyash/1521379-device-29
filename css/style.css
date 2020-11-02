@@ -1387,16 +1387,15 @@ main {
 .catalog-pagination-list {
     list-style: none;
     display: flex;
-    justify-content: stretch;
+    justify-content: center;
     align-content: center;
     padding: 0;
     margin: 0;
     height: 71px;
 }
-
-.catalog-pagination-list li:first-child,
-.catalog-pagination-list li:last-child {
-    flex-grow: 1;
+.catalog-pagination-list-item--back,
+.catalog-pagination-list-item--foward {
+    flex-wrap: 1;
     flex-basis: 50%;
 }
 
