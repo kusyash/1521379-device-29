@@ -879,17 +879,17 @@ main {
     list-style: none;
 }
 .tabs-item {
+    display: none;
     position: relative;
     padding-right: 230px;
+}
+.tabs-item--active {
+    display: list-item;
 }
 .tabs-item-icon {
     position: absolute;
     right: 0;
     top: 0;
-}
-/* временно */
-.tabs-item:nth-child(n+2) {
-    display:none
 }
 .tabs-item p {
     letter-spacing: 0.08em;
@@ -1393,9 +1393,10 @@ main {
     margin: 0;
     height: 71px;
 }
-.catalog-pagination-list-item--back,
-.catalog-pagination-list-item--foward {
-    flex-wrap: 1;
+
+.catalog-pagination-list li:first-child,
+.catalog-pagination-list li:last-child {
+    flex-grow: 1;
     flex-basis: 50%;
 }
 
