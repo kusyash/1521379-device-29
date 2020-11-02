@@ -829,6 +829,7 @@ main {
 .main-information-toggle {
     display: grid;
     grid-auto-flow: row;
+    position: relative;
     padding-top: 53px;
     min-width: 284px;
 }
@@ -836,7 +837,7 @@ main {
     content: '';
     display: block;
     position: absolute;
-    left: 644px;
+    right: 0;
     width: 7px;
     height: 320px;
     top: -12px;
