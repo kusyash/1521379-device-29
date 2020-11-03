@@ -526,6 +526,10 @@
 .site-navigation-sub-list li {
     padding: 0 0 14px;
 }
+.site-navigation-sub-list li:nth-child(5) {
+    display: grid;
+    grid-column: 2 / -1;
+}
 
 /* Главная страница */
 main {
@@ -989,17 +993,19 @@ main {
     padding: 0;
     margin: 0;
 }
-.filter-options-list {
+.filter-options-list-checkbox,
+.filter-options-list-radio {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding-left: 0;
 }
-.filter-checkbox {
-    padding-bottom: 22px;
+.filter-options-list-checkbox {
+    padding-bottom: 23px;
 }
-.filter-radio {
+.filter-options-list-radio {
     padding-bottom: 27px;
 }
+
 .filter-option {
     padding-bottom: 14px;
 }
