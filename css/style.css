@@ -561,14 +561,18 @@ main {
     list-style-type: decimal-leading-zero;
 }
 .slider-item {
-    display: none;
+    display: grid;
     position: relative;
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
     column-gap: 40px;
 }
 .slider-item--active {
-    display: grid;
+    visibility: visible;
+    height: auto;
 }
 .slider-item::after {
     content: counter(main-slider-counter, decimal-leading-zero);
