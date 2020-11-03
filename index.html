@@ -68,16 +68,16 @@
       <section class="main-slider container">
         <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
         <!-- Главный слайдер с товарами -->
-        <div class="section-slider-pagination">
-          <button class="slider-current" type="button" aria-label="Первый слайд"></button>
-          <button type="button" aria-label="Второй слайд"></button>
-          <button type="button" aria-label="Третий слайд"></button>
+        <div class="slider-pagination-list">
+          <button class="slider-pagination slider-pagination--active" type="button" aria-label="Первый слайд"></button>
+          <button class="slider-pagination" type="button" aria-label="Второй слайд"></button>
+          <button class="slider-pagination" type="button" aria-label="Третий слайд"></button>
         </div>
         <ul class="slider-list">
           <!-- Первый слайд -->
           <li class="slider-item slider-item--active">
             <div class="slider-image">
-            <a class="slider-item-link" href="#">
+            <a class="slider-item-link-first" href="#">
               <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">
             </a>
             </div>
@@ -104,7 +104,7 @@
             <!-- Второй слайд -->
           <li class="slider-item">
             <div class="slider-image">
-            <a class="slider-item-link" href="#">
+            <a class="slider-item-link-second" href="#">
               <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
             </a>
             </div>
@@ -123,7 +123,7 @@
           <!-- Третий слайд -->
           <li class="slider-item">
             <div class="slider-image">
-            <a class="slider-item-link" href="#">
+            <a class="slider-item-link-third" href="#">
               <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
             </a>
             </div>
@@ -359,5 +359,6 @@
     <script src="js/popup.js"></script>
     <script src="js/map.js"></script>
     <script src="js/tabs.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
