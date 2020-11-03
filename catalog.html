@@ -5,6 +5,7 @@
     <title>HTML Academy: Девайс - Каталог товаров</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -13,7 +14,7 @@
           <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина Девайс">
         </a>
         <nav class="main-navigation">
-          <form class="site-search" action="index.html" method="get">
+          <form class="site-search" action="https://echo.htmlacademy.ru/" method="get">
             <div class="site-search-box">
               <input class="field-search" placeholder="Поиск по сайту">
               <button class="form-button" type="submit">Найти</button>
@@ -108,19 +109,19 @@
               <legend>Цвет</legend>
               <ul class="filter-options-list-checkbox">
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="color[]" id="filter-color-black" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="color[]" id="filter-color-black" value="black" checked>
                   <label for="filter-color-black">Черный</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="color[]" id="filter-color-white">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="color[]" id="filter-color-white" value="white">
                   <label for="filter-color-white">Белый</label>
                 </li>                
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="color[]" id="filter-color-blue" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="color[]" id="filter-color-blue" value="blue" checked>
                   <label for="filter-color-blue">Синий</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="color[]" id="filter-color-red" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="color[]" id="filter-color-red" value="red" checked>
                   <label for="filter-color-red">Красный</label>
                 </li>
                 <li class="filter-option">
@@ -228,10 +229,10 @@
             <h2 class="visually-hidden">Страницы каталога</h2>     
             <ul class="catalog-pagination-list">
               <li>
-                <p class="catalog-pagination-link catalog-pagination-link--button catalog-pagination-link--disable"><span>Назад</span></p>
+                <a class="catalog-pagination-link catalog-pagination-link--button catalog-pagination-link--disable">Назад</a>
               </li>
               <li>
-                <p class="catalog-pagination-link catalog-pagination-link--disable" aria-label="Страница 1">1</p>
+                <a class="catalog-pagination-link catalog-pagination-link--disable" aria-label="Страница 1">1</a>
               </li>
               <li>
                 <a class="catalog-pagination-link" href="#" aria-label="Страница 2">2</a>
@@ -240,7 +241,7 @@
                 <a class="catalog-pagination-link" href="#" aria-label="Страница 3">3</a>
               </li>
               <li>
-                <a class="catalog-pagination-link catalog-pagination-link--button" href="#"><span>Вперёд</span></a>
+                <a class="catalog-pagination-link catalog-pagination-link--button" href="#">Вперёд</a>
               </li>
             </ul>
           </section>

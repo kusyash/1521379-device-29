@@ -12,7 +12,7 @@ for(let index in menuTabs){
                 if(menuTabs.hasOwnProperty(index)){
                     menuTabs[index].classList.remove("tabs-menu-item--active");
                 }
-           }
+            }
 
             for(let index in contentTabs){
                 if(contentTabs.hasOwnProperty(index)){

@@ -573,6 +573,8 @@ main {
 .slider-item--active {
     visibility: visible;
     height: auto;
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 .slider-item::after {
     content: counter(main-slider-counter, decimal-leading-zero);
@@ -696,12 +698,12 @@ main {
     margin-bottom: 95px;
 }
 .category-list {
-    display: grid;
-    grid-auto-flow: column;
-    justify-items: center;
-    column-gap: 40px;
-    margin: 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0;
     padding: 0;
 }
 .category-item {
@@ -868,6 +870,8 @@ main {
 .tabs-menu-item--active,
 .tabs-menu-item:active {
     background-color: var(--basic-black);
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 .tabs-menu-item--active .button,
 .tabs-menu-item:active .button {
@@ -895,6 +899,8 @@ main {
 }
 .tabs-item--active {
     display: list-item;
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 .tabs-item-icon {
     position: absolute;
@@ -1224,7 +1230,7 @@ main {
     background-color: var(--basic-grey);
     position: absolute;
     z-index: -1;
-    height: 70px;
+    height: 100%;
     width: 100vw;
     left: 0;
 }
@@ -1717,5 +1723,13 @@ main {
     }
     20%, 40%, 60%, 80% {
         transform: translateX(10px);
+    }
+}
+@keyframes fadeIn {
+    0%, 100% {
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
     }
 }

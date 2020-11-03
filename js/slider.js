@@ -9,16 +9,16 @@ for(let index in paginationSlider){
            evt.preventDefault();
 
            for(let index in paginationSlider){
-            if(paginationSlider.hasOwnProperty(index)){
-                paginationSlider[index].classList.remove("slider-pagination-item--active");
+                if(paginationSlider.hasOwnProperty(index)){
+                    paginationSlider[index].classList.remove("slider-pagination-item--active");
+                }
             }
-        }
 
             for(let index in itemSlider){
-             if(itemSlider.hasOwnProperty(index)){
+                if(itemSlider.hasOwnProperty(index)){
                     itemSlider[index].classList.remove("slider-item--active");
+                }
             }
-        }
             paginationSlider[index].classList.add("slider-pagination-item--active");
             itemSlider[index].classList.add("slider-item--active");
         });
