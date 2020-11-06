@@ -55,10 +55,10 @@
 
     --special-pink: #f6dada;
 
-    --font-family-basic: "Open Sans", Arial, sans-serif;
-    --font-family-basic-light: "Open Sans Light", Arial, sans-serif;
-    --font-family-special-bold: "Gilroy Extra Bold", Arial, sans-serif;
-    --font-family-special-light: "Gilroy Light", Arial, sans-serif;
+    --font-family-basic: "Open Sans", "Arial", sans-serif;
+    --font-family-basic-light: "Open Sans Light", "Arial", sans-serif;
+    --font-family-special-bold: "Gilroy Extra Bold", "Arial", sans-serif;
+    --font-family-special-light: "Gilroy Light", "Arial", sans-serif;
 
     --grid-columns-pair-gap: 0;
 }
@@ -366,7 +366,7 @@
     left: 0;
     z-index: 5;
     background-repeat: no-repeat;
-    background-image: url(../img/icon_search-black.svg);
+    background-image: url(../img/icon-search-black.svg);
     background-position: left;
 }
 .field-search {
@@ -451,17 +451,17 @@
     padding-left: 25px;
 }
 .user-navigation-list .link-user {
-    background-image: url(../img/icon_user-black.svg);
+    background-image: url(../img/icon-user-black.svg);
 }
 .user-navigation-list .link-logout,
 .footer-personal-links .link-logout {
     padding-left: 12px;
 }
 .user-navigation-list .link-compare {
-    background-image: url(../img/icon_chart-black.svg);
+    background-image: url(../img/icon-chart-black.svg);
 }
 .user-navigation-list .link-cart {
-    background-image: url(../img/icon_cart-black.svg);
+    background-image: url(../img/icon-cart-black.svg);
     background-position-x: 5px;
 }
 
@@ -475,7 +475,7 @@
 .site-navigation-list {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 .site-navigation-item {
     line-height: 22px;
@@ -513,7 +513,7 @@
     padding-right: 35px;
 }
 .site-navigation-sub-list + a::before {
-    content: url(../img/icon_plus.svg);
+    content: url(../img/icon-plus.svg);
     display: block;
     width: 22px;
     height: 22px;
@@ -1541,16 +1541,16 @@ main {
 }
 .footer-links .link-user {
     padding-left: 24px;
-    background-image: url(../img/icon_user-yellow.svg);
+    background-image: url(../img/icon-user-yellow.svg);
 }
 
 .footer-links .link-compare {
     padding-left: 24px;
-    background-image: url(../img/icon_chart-yellow.svg);
+    background-image: url(../img/icon-chart-yellow.svg);
 }
 .footer-links .link-cart {
     padding-left: 19px;
-    background-image: url(../img/icon_cart-yellow.svg);
+    background-image: url(../img/icon-cart-yellow.svg);
 }
 
 .footer-contacts {
@@ -1645,7 +1645,7 @@ main {
     outline: none;
     cursor: pointer;
     background-color: transparent;
-    background-image: url(../img/button_close.svg);
+    background-image: url(../img/button-close.svg);
     opacity: 0.6;
 }
 .modal-close:hover {
