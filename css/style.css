@@ -38,6 +38,13 @@
 
 /* Переменные */
 :root {
+    --basic-black-a15: rgba(0, 0, 0, 0.15);
+    --basic-black-a18: rgba(0, 0, 0, 0.18);
+    --basic-black-a2: rgba(0, 0, 0, 0.2);
+    --basic-black-a3: rgba(0, 0, 0, 0.3);
+    --basic-black-a4: rgba(0, 0, 0, 0.4);
+    --basic-black-a6: rgba(0, 0, 0, 0.6);
+    --basic-white-a5:rgba(255, 255, 255, 0.5);
     --basic-black: #000;
     --basic-dark-extra: #363636;
     --basic-dark: #464646;
@@ -204,7 +211,7 @@
     background-color: var(--extra-yellow-dark);
 }
 .button:active {
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--basic-black-a3);
 }
 .button::after {
     content: '';
@@ -307,7 +314,7 @@
 .form-base input[type="text"]::placeholder,
 .form-base input[type="email"]::placeholder,
 .form-base textarea::placeholder {
-    color: rgba(0, 0, 0, 0.4);
+    color: var(--basic-black-a4);
 }
 
 .form-base label {
@@ -369,13 +376,16 @@
     background-image: url(../img/icon-search-black.svg);
     background-position: left;
 }
-.field-search {
+.site-search-label {
     flex-grow: 2;
+    max-width: 356px;
+}
+.site-search-input {
     margin: 0;
-    padding: 0 15px 0 40px;
+    padding: 0 15px 0 37px;
     height: 50px;
     border: none;
-    max-width: 356px;
+    width: 356px;
     box-sizing: border-box;
     border-bottom: 2px solid transparent;
     background-color: var(--extra-yellow-light);
@@ -383,20 +393,20 @@
     color: var(--basic-black);
     opacity: 0.3;
 }
-.field-search::-webkit-input-placeholder {
+.site-search-input::-webkit-input-placeholder {
     color: var(--basic-black);
 }
-.field-search::-moz-placeholder {
+.site-search-input::-moz-placeholder {
     color: var(--basic-black);
 }
-.field-search::placeholder {
+.site-search-input::placeholder {
     color: var(--basic-black);
 }
-.field-search:hover {
+.site-search-input:hover {
     opacity: 0.6;
 }
-.field-search:active,
-.field-search:focus,
+.site-search-input:active,
+.site-search-input:focus,
 .site-search-box:focus-within input {
     outline-style: none;
     border-bottom: 2px solid var(--basic-black);
@@ -424,10 +434,11 @@
 .form-button:active,
 .form-button:focus {
     background-color: var(--basic-black);
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--basic-white-a5);
 }
 
 .user-navigation-list,
+.site-navigation-catalog,
 .site-navigation-list {
     list-style: none;
     padding: 0;
@@ -472,25 +483,31 @@
 .user-navigation-list li:last-child {
     justify-self: end;
 }
-.site-navigation-list {
+.site-navigation {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+}
+.site-navigation-list {
+    display: grid;
+    grid-template-columns: max-content max-content 1fr;
+    column-gap: 35px;
+    row-gap: 5px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    width: 50%;
+    margin-left: auto;
 }
 .site-navigation-item {
     line-height: 22px;
-    padding: 0 19px;
 }
+
 .site-navigation-item:first-child {
     flex-basis: 50%;
     padding: 0;
 }
-.site-navigation-item:last-child {
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: -3px; /* #pixelperfect */
+.site-navigation-item:nth-child(3n) {
+    text-align: right;
+    margin-right: -3px;
 }
-
 .site-navigation-sub-list {
     display: none;
     grid-template-columns: repeat(3, max-content);
@@ -505,7 +522,7 @@
     padding-bottom: 27px;
     background-color: var(--extra-yellow-light);
 }
-.site-navigation-item:hover .site-navigation-sub-list {
+.site-navigation-catalog-item:hover .site-navigation-sub-list {
     display: grid;
 }
 .site-navigation-sub-list + a {
@@ -530,7 +547,7 @@
 }
 
 /* Главная страница */
-main {
+.page-content {
     overflow: hidden;
 }
 .main-slider {
@@ -890,7 +907,7 @@ main {
     min-width: 115px;
 }
 .tabs-menu-item .button:focus-within {
-    outline: 2px solid var(--basic-dark);
+    outline: 2px solid var(--basic-black);
     outline-offset: -2px;
     outline-style: dotted;
 }
@@ -1057,7 +1074,7 @@ main {
     background-position: 0 0;
 }
 .filter-input-checkbox:not(:disabled):hover + label::before {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--basic-black-a6);
 }
 .filter-input-checkbox:not(:disabled):hover + label::after {
     opacity: 0.6;
@@ -1102,7 +1119,7 @@ main {
     border-radius: 50%;
 }
 .filter-input-radio:not(:disabled):hover + label::before {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--basic-black-a6);
 }
 .filter-input-radio:not(:disabled):hover + label::after {
     opacity: 0.6;
@@ -1162,7 +1179,7 @@ main {
     padding-top: 10px;
 }
 .range-controls .scale {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--basic-black-a2);
 
     height: 2px;
 }
@@ -1181,7 +1198,7 @@ main {
     border: 8px solid var(--basic-white);
     background-color: var(--basic-grey-dark);
     border-radius: 50%;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 2px 2px var(--basic-black-a18);
     cursor: pointer;
 }
 .range-controls .toggle--min {
@@ -1200,6 +1217,7 @@ main {
     column-gap: 19px;
     padding-top: 7px;
 }
+
 .price-controls label {
     font-family: var(--font-family-special-light);
     font-size: 14px;
@@ -1213,7 +1231,14 @@ main {
     outline: none;
     padding: 0
 }
-
+.price-controls input::-webkit-outer-spin-button,
+.price-controls input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.price-controls input[type=number] {
+  -moz-appearance: textfield;
+}
 
 /* Каталог товаров */
 .catalog-container {
@@ -1390,8 +1415,8 @@ main {
     width: 58px;
     height: 58px;
     border-radius: 50%;
-    color: rgba(0, 0, 0, 0.3);
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    color: var(--basic-black-a3);
+    border: 2px solid var(--basic-black-a3);
     font-family: var(--font-family-special-bold);
     font-size: 12px;
     z-index: 1;
@@ -1566,10 +1591,13 @@ main {
 }
 
 .footer-main-links {
+    width: 100%;
     display: grid;
     justify-self: center;
-    grid-auto-flow: column;
+    justify-content: center;
     column-gap: 33px;
+    row-gap: 5px;
+    grid-template-columns: repeat(3, max-content);
 }
 
 .footer-social-media {
@@ -1621,7 +1649,7 @@ main {
     z-index: 100;
     margin: 0 auto;
     background-color: var(--basic-white);
-    box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 16px var(--basic-black-a15);
 }
 .modal--show {
     display: block;
